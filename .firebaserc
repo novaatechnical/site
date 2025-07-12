@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "novaa-site"
-  }
+    "default": "novaa-site",
+    "staging": "novaa-site"
+  },
+  "targets": {},
+  "etags": {}
 }
