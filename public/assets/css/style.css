@@ -371,12 +371,12 @@ body {
 
 .grid2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 30px;
+  grid-template-columns: 1fr; /* single column */
+  gap: 20px;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .grid-item {
@@ -1006,7 +1006,10 @@ TEAM
 
 .scrollbar-item { min-width: calc(50% - 15px); }
 
-
+.grid2 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
 
 /**
 * HERO
@@ -1200,7 +1203,6 @@ TEAM
     display: none;
     flex-direction: column;
     border: 1px solid var(--white_10);
-    z-index: 10;
 }
 
 .dropdown-menu li {
@@ -1335,4 +1337,3 @@ TEAM
 .footer .container { grid-template-columns: 0.5fr 1fr; }
 
 }
-
