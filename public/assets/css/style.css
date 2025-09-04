@@ -493,6 +493,7 @@ body {
   background: none;
   cursor: pointer;
   position: relative; 
+  z-index: 10001;
 }
 
 .nav-toggle-btn.active .menu,
@@ -1334,3 +1335,4 @@ TEAM
 .footer .container { grid-template-columns: 0.5fr 1fr; }
 
 }
+
