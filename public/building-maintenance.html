@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVAA Group | Building Maintenance</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="index.html#home" class="logo">
+          <img src="assets/images/logoheader.png" alt="NOVAA Group Logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="index.html#home" class="navbar-link skewBg" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index.html#about" class="navbar-link skewBg" data-nav-link>About</a>
+            </li>
+
+            <li class="navbar-item dropdown">
+            <a href="#" class="navbar-link dropdown-toggle" onclick="toggleDropdown(event)">Services ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="wayfinding-navigation.html" class="dropdown-link">Wayfinding & Navigation</a></li>
+                <li><a href="interior-construction.html" class="dropdown-link">Interior & Special Construction</a></li>
+                <li><a href="building-maintenance.html" class="dropdown-link">Building Maintenance</a></li>
+                <li><a href="medical-attire.html" class="dropdown-link">Medical Attire</a></li>
+            </ul>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index.html#contact" class="navbar-link skewBg" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+
+          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="menu"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+
+    <section class="section policies" id="policy" aria-label="company policy">
+      <div class="container">
+
+            <h2 class="h2 section-title">Building Maintenance</h2>
+
+            <p class="section-text2" style="--color: var(--light-gray-2);">
+            Our Building Maintenance Services are designed to preserve the functionality, safety, and aesthetics of your built 
+            environment. We provide comprehensive, proactive, and reactive maintenance solutions to ensure your facility 
+            operates smoothly and remains in top condition throughout its lifecycle. From daily upkeep to complex system 
+            servicing, we tailor maintenance plans to meet the specific needs of each building type—whether commercial, 
+            institutional, industrial, or residential.
+            </p>
+
+            <h3 class="h3 section-title2"><br><br>Services</h3>
+
+            <ul class="listbox">
+                <li>Preventive & Scheduled Maintenance: We implement routine maintenance schedules to prevent breakdowns, reduce repair costs, 
+                    and extend the lifespan of building assets. This includes inspections, testing, and servicing of critical infrastructure.</li>
+                <li>Corrective & Emergency Maintenance: When unexpected issues arise, our responsive team is ready to troubleshoot and resolve them efficiently. We minimize downtime and restore functionality with minimal disruption.</li>
+                <li>MEP System Maintenance: Our team is skilled in maintaining mechanical, electrical, and plumbing systems—including HVAC, lighting, water supply, drainage, fire safety systems, and more—ensuring they remain compliant, energy-efficient, and operational.</li>
+                <li>Interior Maintenance: From flooring and ceiling repairs to furniture, fixtures, and fittings, we keep interior spaces clean, safe, and presentable for users and visitors.</li>
+                <li>Facility Condition Assessment: Our detailed inspections help clients make informed decisions on repairs, upgrades, and budgeting by assessing the current state of the building and prioritizing areas that need attention.</li>
+            </ul>
+
+            <h3 class="h3 section-title2"><br><br>Why it Matters</h3>
+
+            <p class="section-text2">
+            Proper building maintenance not only protects your investment but also ensures the health, comfort, and safety of occupants. Our commitment to quality, reliability, 
+            and responsiveness helps reduce operational costs, prevent service interruptions, and maintain regulatory compliance.
+            </p>
+      </div>
+    </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy;<a href="#" class="copyright-link"></a>
+          2025 NOVAA Group Sdn. Bhd.
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init({
+          offset: 300,
+          duration: 2000,
+      });
+  </script>
+</body>
+
+</html>
