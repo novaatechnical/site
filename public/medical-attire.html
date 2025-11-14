@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVAA Group | Medical Attire</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="index.html#home" class="logo">
+          <img src="assets/images/logoheader.png" alt="NOVAA Group Logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="index.html#home" class="navbar-link skewBg" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index.html#about" class="navbar-link skewBg" data-nav-link>About</a>
+            </li>
+
+            <li class="navbar-item dropdown">
+            <a href="#" class="navbar-link dropdown-toggle" onclick="toggleDropdown(event)">Services ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="wayfinding-navigation.html" class="dropdown-link">Wayfinding & Navigation</a></li>
+                <li><a href="interior-construction.html" class="dropdown-link">Interior & Special Construction</a></li>
+                <li><a href="building-maintenance.html" class="dropdown-link">Building Maintenance</a></li>
+                <li><a href="medical-attire.html" class="dropdown-link">Medical Attire</a></li>
+            </ul>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index.html#contact" class="navbar-link skewBg" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+
+          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="menu"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+
+    <!--#HERO-->
+    <section class="hero">
+      <picture>
+        <!-- Mobile image first -->
+        <source 
+          media="(max-width: 768px)" 
+          srcset="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dwa67a7bd1/cherokee/homepage/ck-hero-mobile-august-labs-sets-20250801.jpg">
+        
+        <!-- Desktop image -->
+        <img 
+          src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw7ada2bb7/cherokee/homepage/ck-hero-desktop-august-labs-sets-20250801.jpg" 
+          alt="Hero Banner" 
+          class="hero-img">
+      </picture>
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">
+              Medical Attire
+            </h1>
+
+            <p class="hero-text">
+              Cherokee | Infinity
+            </p>
+          </div>
+    </section>
+
+    <!--#ABOUT-->
+    <section class="section description">
+        <div class="container" data-aos="fade-in">
+            <p class="section-text2" style="--color: var(--light-gray-2);">
+                <br>
+                Our Medical Attire service provides high-quality, functional, and professional uniforms tailored 
+                specifically for the healthcare industry. We understand that medical professionals require attire 
+                that is not only durable and comfortable but also meets hygiene standards, safety requirements, 
+                and presents a polished appearance. From hospitals and clinics to laboratories and pharmacies, we 
+                supply a complete range of medical clothing that supports the day-to-day demands of healthcare workers.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="row" data-aos="fade-right">
+                <div class="row-image">
+                <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dwf16cbdbc/blog/blog-post/ck-hero-desktop-best-scrubs-for-nurses-04012025.jpg" alt="Scrubs and Lab Coats">
+                </div>
+                <div class="row-text">
+                <h3 class="h3 section-title2">SCRUBS & LAB COATS</h3>
+                <p class="section-text">
+                    Available in various sizes, colors, and cuts, our scrubs and lab coats are made 
+                    from breathable, anti-bacterial, and easy-care fabrics suitable for long shifts 
+                    and sterile environments.
+                </p>
+                </div>
+            </div>
+
+            <div class="row reverse" data-aos="fade-left">
+                <div class="row-image">
+                <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw549c974d/blog/blog-post/ck-hero-deskop-different-scrub-materials-01012025.jpg" alt="Custom Uniforms">
+                </div>
+                <div class="row-text">
+                <h3 class="h3 section-title2">CUSTOM UNIFORMS</h3>
+                <p class="section-text">
+                    We offer embroidery of names, logos, and department designations—ensuring your 
+                    medical team maintains a unified and professional identity.
+                </p>
+                </div>
+            </div>
+
+            <div class="row" data-aos="fade-right">
+                <div class="row-image">
+                <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw685553bf/blog/blog-post/ck-hero-desktop-different-types-of-scrubs-20241010.jpg" alt="Specialist Wear">
+                </div>
+                <div class="row-text">
+                <h3 class="h3 section-title2">NURSING & SPECIALIST WEAR</h3>
+                <p class="section-text">
+                    From nursing dresses and tunics to surgical gowns and PPE for 
+                    frontline responders, our range is designed for both functionality and comfort—without compromising quality.
+                </p>
+                </div>
+            </div>
+
+            <div class="row reverse" data-aos="fade-left">
+                <div class="row-image">
+                <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw7929355c/blog/blog-post/ck-hero-desktop-top-trendy-scrub-pants-03012025.jpg" alt="Eco-Friendly Fabrics">
+                </div>
+                <div class="row-text">
+                <h3 class="h3 section-title2">ECO-FRIENDLY & PERFORMANCE FABRICS</h3>
+                <p class="section-text">
+                    Our attire uses advanced textiles including moisture-wicking, antimicrobial protection, 
+                    and sustainable materials—supporting greener and healthier work environments.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+    <h3 class="h3 section-title2" style="margin-top: 60px;">Industries Served</h3>
+
+    <div class="grid2" style="margin-bottom: 50px;">
+        <div class="grid-item">Hospitals & Clinics</div>
+        <div class="grid-item">Pharmacies & Wellness Centers</div>
+        <div class="grid-item">Educational Institutions (Medical Schools)</div>
+        <div class="grid-item">Veterinary & Animal Clinics</div>
+    </div>
+    </section>
+    <section class="section">
+    <h3 class="h3 section-title2"><br><br>Why Choose Us</h3>
+
+        <p class="section-text2">
+        We combine quality craftsmanship, reliable sourcing, and customization capabilities to deliver attire that reflects your organization’s standards and professionalism. 
+            With our experience and commitment to service, we help healthcare providers focus on what matters most—caring for others—while we take care of what they wear.
+        </p>
+    </section>
+
+    <section class="section attire-brands" id="brands">
+    <div class="container">
+
+        <h2 class="h2 section-title">Brands</h2>
+
+        <!-- Cherokee -->
+        <div class="brand-block">
+        <h3 class="h3 section-title2">CHEROKEE</h3>
+        <p class="section-text2">
+            Cherokee quickly grew to become the largest and most popular
+            medical apparel line in the world.
+        </p>
+        <div class="brand-gallery">
+            <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw90811a17/landing/cherokee-collections/ck-lp-collections-aqua-desktop-atmos-20240103.jpg" alt="Cherokee 1">
+            <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw8d5222d7/landing/cherokee-collections/ck-lp-collections-aqua-desktop-ck-by-ck-20230919.jpg" alt="Cherokee 2">
+        </div>
+        </div>
+
+        <!-- Infinity -->
+        <div class="brand-block">
+        <h3 class="h3 section-title2">INFINITY</h3>
+        <p class="section-text2">
+            Athletic inspired scrubs, adapted to meet the needs of people
+            working in demanding clinical environments.
+        </p>
+        <div class="brand-gallery">
+            <img src="https://images.squarespace-cdn.com/content/v1/632ae25fad7703640c389c78/94d9402d-b5d0-41f0-8ab6-a0a28db6dbd2/infinity_link.jpg?format=2500w" alt="Infinity 1">
+            <img src="https://www.allheart.com/on/demandware.static/-/Sites-allheart-Library/default/dwbbfa90a9/featured-products/infinity/ah-plp-aqua-infinity-apparel-mobile-20240516.jpg" alt="Infinity 2">
+        </div>
+        </div>
+        <p class="section-text3">*Product Images and associated images are for illustrative and reference purposes only and may differ from the actual product due to differences in monitors. Colours of products may also appear different to those shown on the site.</p>
+    </div>
+    </section>
+    <section style="margin-top: 60px;"></section>
+  
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" id="contact">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">NOVAA Group Sdn Bhd (1597613-A)</a>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <address class="item-text">
+                        VC-03-05 Edusentral,
+                        <br>Jalan Setia Murni U13/51,
+                        <br>Setia Alam 40170, 
+                        <br>Shah Alam, Selangor.
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <a href="tel:+241245654235" class="item-text">+603-3006 5709</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-open"></ion-icon>
+              </div>
+
+              <a href="mailto:info@exemple.com" class="item-text">admin.novaa@novaagrp.com</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="business-outline"></ion-icon>
+              </div>
+
+              <a class="item-text">Monday - Friday: 8.30AM - 5.30PM</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-wrapper">
+          <p class="footer-list-title">Reach Out to Us</p>
+          <div class="contact-form-wrapper">
+
+          <form target="_blank" contact-form action="https://formsubmit.co/alyssa210303@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none"> 
+
+            <div class="row100">
+              <div class="inputBox50">
+                <input type="text" name="name" placeholder="Full Name" required>
+              </div>
+              <div class="inputBox50">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <input type="text" name="_subject" placeholder="Subject" class="single-line-input" required>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <textarea name="message" placeholder="Message" class="large-message-box" required></textarea>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <button type="submit" class="btn-submit">SEND</button>
+              </div>
+            </div>
+
+            <div id="form-status" class="form-status-message"></div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy;<a href="#" class="copyright-link"></a>
+          2025 NOVAA Group Sdn. Bhd.
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000,
+        });
+    </script>
+</body>
+
+</html>

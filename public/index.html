@@ -1,234 +1,468 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaaGroup — Under Maintenance</title>
-  <meta name="description" content="NovaaGroup. Our site is undergoing scheduled maintenance — we'll be back shortly." />
-  <meta name="robots" content="noindex, nofollow" />
-  <meta property="og:title" content="NovaaGroup — Under Maintenance" />
-  <meta property="og:description" content="We're performing scheduled maintenance and will be back soon." />
-  <meta property="og:type" content="website" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVAA Group Sdn. Bhd.</title>
 
-  <style>
-    :root{
-      --brand: #00a39a;           /* primary brand */
-      --brand-2: #007c9e;          /* secondary accent */
-      --bg: #0b1020;
-      --text: #e8f2f2;
-      --muted: #a8b5b5;
-      --card: rgba(255,255,255,0.06);
-      --stroke: rgba(255,255,255,0.12);
-      --success: #1dd1a1;
-      --warn: #ffd166;
-    }
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg: #f6faf9;
-        --text: #0d1b1e;
-        --muted: #4c5a5e;
-        --card: rgba(255,255,255,0.85);
-        --stroke: rgba(0,0,0,0.08);
-      }
-    }
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    html, body { height: 100%; }
-    body{
-      margin:0;
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Color Emoji", "Apple Color Emoji", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 800px at 10% 10%, rgba(0,163,154,0.15), transparent 70%),
-        radial-gradient(1000px 700px at 90% 20%, rgba(0,124,158,0.15), transparent 70%),
-        linear-gradient(180deg, var(--bg), #0a0f1a);
-      display:grid;
-      place-items:center;
-      padding: 24px;
-    }
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    .wrap{
-      max-width: 880px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .card{
-      position: relative;
-      background: var(--card);
-      border: 1px solid var(--stroke);
-      backdrop-filter: blur(8px) saturate(1.1);
-      -webkit-backdrop-filter: blur(8px) saturate(1.1);
-      border-radius: 20px;
-      padding: clamp(20px, 3.5vw, 36px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      overflow: clip;
-    }
-
-    .brand{
-      display:flex; gap:14px; align-items:center; margin-bottom: 8px;
-    }
-    .logo{
-      width: 52px; height: 52px; border-radius: 14px; overflow:hidden;
-      border: 1px solid var(--stroke);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.20);
-    }
-    .brand h1{
-      font-size: clamp(22px, 3.2vw, 28px);
-      margin:0;
-      letter-spacing: 0.2px;
-    }
-    .tagline{ color: var(--muted); margin: 0 0 18px; font-weight: 500; }
-
-    .status{
-      display:flex; gap:16px; align-items:flex-start; margin: 18px 0 8px;
-    }
-    .badge{
-      display:inline-flex; align-items:center; gap:8px;
-      font-weight: 600; letter-spacing: .2px;
-      background: linear-gradient(180deg, rgba(0,163,154,.18), rgba(0,124,158,.18));
-      border:1px solid var(--stroke);
-      color: var(--text);
-      padding: 8px 12px; border-radius: 999px;
-    }
-
-    .lead{
-      font-size: clamp(18px, 2.2vw, 20px);
-      margin: 6px 0 2px;
-    }
-    .copy{ color: var(--muted); margin: 8px 0 16px; }
-
-    .actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top: 8px; }
-    .btn{
-      appearance: none; border:1px solid var(--stroke);
-      background: transparent; color: var(--text);
-      padding: 10px 14px; border-radius: 12px; cursor: pointer; font-weight: 600;
-      transition: transform .08s ease, background .2s ease, border-color .2s ease;
-      text-decoration: none; display:inline-flex; align-items:center; gap:10px;
-    }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,0.22); }
-    .btn.primary{ background: linear-gradient(180deg, var(--brand), var(--brand-2)); border-color: transparent; color: white; }
-
-    .meta{ margin-top: 18px; color: var(--muted); font-size: 14px; }
-    .meta code{ background: rgba(255,255,255,0.06); border:1px solid var(--stroke); padding: 2px 6px; border-radius: 8px; }
-
-    footer{
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center; margin-top: 18px;
-      border-top: 1px dashed var(--stroke); padding-top: 16px; color: var(--muted); font-size: 14px;
-    }
-    .small{ font-size: 13px; }
-
-    /* Decorative gear */
-    .gear{ width: 64px; height: 64px; flex: 0 0 auto; }
-    .spin{ animation: spin 2.5s linear infinite; transform-origin: 50% 50%; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    .wave{
-      position:absolute; inset:auto -2px -2px -2px; height: 120px; pointer-events:none; opacity:.7;
-      background: radial-gradient(80px 80px at 10% 20%, rgba(255,255,255,.06), transparent 60%),
-                  radial-gradient(100px 60px at 60% 10%, rgba(255,255,255,.04), transparent 60%),
-                  radial-gradient(60px 60px at 90% 30%, rgba(255,255,255,.04), transparent 60%);
-      mask: linear-gradient(transparent, black 30%);
-    }
-
-    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-  </style>
+  <!-- 
+    - preload images
+  -->
 </head>
-<body>
-  <main class="wrap" role="main">
-    <section class="card" aria-labelledby="title" aria-describedby="summary">
-      <div class="brand">
-        <!-- Accessible inline logo -->
-        <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="NovaaGroup logo" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#00a39a"/>
-              <stop offset="100%" stop-color="#007c9e"/>
-            </linearGradient>
-          </defs>
-          <rect x="1.5" y="1.5" width="61" height="61" rx="14" ry="14" fill="url(#g)" stroke="rgba(0,0,0,.15)"/>
-          <g fill="#fff" opacity="0.95">
-            <path d="M16 42V22h6.6l8.7 12.2V22H38v20h-6.4L22.6 30.2V42H16z"/>
-            <path d="M48 22v20h-6V28.8c0-2.2-1.2-3.6-3.6-3.6H36v-5.2h2.9C44.3 20 48 23.7 48 28.8z" opacity=".9"/>
-          </g>
-        </svg>
-        <div>
-          <h1 id="title">NovaaGroup</h1>
-          <p class="tagline">Solutions</p>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="assets/images/logoheader.png" alt="NOVAA Group Logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link skewBg" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#about" class="navbar-link skewBg" data-nav-link>About</a>
+            </li>
+
+            <li class="navbar-item dropdown">
+            <a href="#" class="navbar-link dropdown-toggle" onclick="toggleDropdown(event)">Services ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="wayfinding-navigation.html" class="dropdown-link">Wayfinding & Navigation</a></li>
+                <li><a href="interior-construction.html" class="dropdown-link">Interior & Special Construction</a></li>
+                <li><a href="building-maintenance.html" class="dropdown-link">Building Maintenance</a></li>
+                <li><a href="medical-attire.html" class="dropdown-link">Medical Attire</a></li>
+            </ul>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#contact" class="navbar-link skewBg" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+
+          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="menu"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+
         </div>
+
       </div>
+    </div>
 
-      <div class="status" role="status" aria-live="polite">
-        <svg class="gear" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g class="spin">
-            <path d="M50 18a4 4 0 0 1 4 4v4c3 .5 5.8 1.6 8.3 3.1l2.8-2.8a4 4 0 1 1 5.7 5.7l-2.8 2.8c1.5 2.5 2.6 5.3 3.1 8.3h4a4 4 0 1 1 0 8h-4c-.5 3-1.6 5.8-3.1 8.3l2.8 2.8a4 4 0 1 1-5.7 5.7l-2.8-2.8A27.8 27.8 0 0 1 54 74v4a4 4 0 1 1-8 0v-4a27.8 27.8 0 0 1-8.3-3.1l-2.8 2.8a4 4 0 1 1-5.7-5.7l2.8-2.8A27.8 27.8 0 0 1 26 54h-4a4 4 0 1 1 0-8h4c.5-3 1.6-5.8 3.1-8.3l-2.8-2.8a4 4 0 1 1 5.7-5.7l2.8 2.8C36.2 28.6 39 27.5 42 27v-5a4 4 0 0 1 4-4z" fill="currentColor" opacity="0.9"/>
-          </g>
-          <circle cx="50" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="4" opacity="0.3" />
-        </svg>
-        <div>
-          <div class="badge" title="Maintenance in progress" aria-label="Maintenance in progress">
-            <!-- wrench icon -->
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 7.5a6.5 6.5 0 0 1-8.86 6.07L5.5 20.2a2 2 0 1 1-2.83-2.83l6.63-6.64A6.5 6.5 0 1 1 21 7.5z" stroke="currentColor" stroke-width="1.8"/>
-            </svg>
-            Maintenance in progress
-          </div>
-          <p class="lead" id="summary">We're improving our systems so we can serve you better. Thanks for your patience!</p>
-          <p class="copy">Our website is temporarily unavailable while we carry out scheduled maintenance. NovaaGroup provides integrated solutions for rehabilitation facilities and building equipment — we'll be back online shortly.</p>
+  </header>
 
-          <div class="actions">
-            <a class="btn primary" href="mailto:admin@novaagroup.com" aria-label="Email NovaaGroup support">
-              <!-- mail icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm.5 1.8 7.5 5.2 7.5-5.2" stroke="currentColor" stroke-width="1.8"/></svg>
-              Email support
-            </a>
-            <a class="btn" href="#" onclick="location.reload()" aria-label="Refresh the page">
-              <!-- refresh icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 7v6h-6" stroke="currentColor" stroke-width="1.8"/><path d="M20 13a8 8 0 1 1-2.34-5.66L20 7" stroke="currentColor" stroke-width="1.8"/></svg>
-              Try again
-            </a>
-            <a class="btn" href="/" aria-label="Go to homepage">
-              <!-- home icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.5 12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z" stroke="currentColor" stroke-width="1.8"/></svg>
-              Back to homepage
-            </a>
-            <a class="btn" href="#" aria-label="System status (coming soon)" title="Replace with your status page URL">
-              <!-- activity icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h5l2.5-7 3 14 2.5-7H21" stroke="currentColor" stroke-width="1.8"/></svg>
-              Status page
-            </a>
-          </div>
+  <main>
+    <article>
 
-          <p class="meta">
-            Last updated: <time id="lastUpdated" aria-live="polite">—</time>
-            <span class="small">•</span> Reference ID: <code id="refId">MAINT-<span id="rand">0000</span></code>
+    <!--#HERO-->
+    <section class="section hero" id="home" aria-label="home">
+      <picture>
+        <img 
+          src="assets/images/background.jpg" 
+          alt="Hero Banner" 
+          class="hero-img">
+      </picture>
+    </section>
+
+    
+
+    <!--#ABOUT-->
+    <section class="section about" id="about" aria-label="about">
+        <div class="container" data-aos="fade-in">
+
+            <div class="about-content">
+
+            <h2 class="h2 section-title">
+                About Us
+            </h2>
+
+            <p class="section-text" style="--color: var(--light-gray-2);">
+                Novaa Group Sdn Bhd , we are committed to delivering high-quality products and services that meet the unique needs of our 
+                clients. Founded in 2024, our team of dedicated professionals works collaboratively to provide innovative solutions that 
+                drive success and growth. With a focus on integrity, excellence, and customer satisfaction, 
+                we aim to build long-term relationships and make a positive impact.
+            </p>
+            </div>
+
+            <figure class="about-logo img-holder" style="--width: ; --height: 480;">
+            <img
+                src="./assets/images/logo.png"
+                width="480" height="480" alt="logo" class="w-100">
+            </figure>
+
+        </div>
+    </section>
+
+    <section class="section policies" id="policy" aria-label="company policy">
+        <div class="container">
+
+            <h2 class="h2 section-title">Company Policy</h2>
+
+            <p class="section-text" style="--color: var(--light-gray-2);">
+            At Novaa Group Sdn Bhd, we are committed to delivering innovative, reliable, 
+            and high-quality services that exceed client expectations. We achieve this through:
+            </p>
+
+            <ul class="listbox" style="margin-top: 18px;">
+                <li>Upholding professionalism, integrity, and excellence in all our activities</li>
+                <li>Continuously improving our processes and performance</li>
+                <li>Complying with all applicable legal, statutory, and customer requirements</li>
+                <li>Empowering our people through training, teamwork, and leadership</li>
+            </ul>
+
+            <p class="section-text" style="margin-top: 18px;">
+            We strive to build lasting partnerships with our stakeholders by ensuring that customer satisfaction remains at 
+            the heart of our operations. Our goal is to make a meaningful and positive impact in every project we undertake.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="section mission-vision" id="mission-vision" aria-label="Mission and Vision">
+        <div class="container" data-aos="zoom-out">
+
+            <div class="mission">
+            <h2 class="h2 section-title">Mission</h2>
+            <p class="section-text">
+                Our mission is to provide reliable, high-quality services that meet the diverse needs of our clients. 
+                We aim to create lasting value by delivering innovative solutions with professionalism, integrity, and a commitment to excellence. 
+            </p>
+            </div>
+
+            <div class="vision">
+            <h2 class="h2 section-title">Vision</h2>
+            <p class="section-text">
+                Our vision is to be a multifaceted corporation known for exceptional reputation in quality and innovation.
+            </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section services" id="services" aria-label="Services">
+      <div class="container">
+
+        <h2 class="h2 section-title">Our Services</h2>
+
+        <div class="services-wrapper">
+
+          <a href="wayfinding-navigation.html" class="service-box" style="background-color: var(--raisin-black-3);">
+            <div class="service-label">Integrated Wayfinding & Navigation</div>
+            <div class="overlay">
+              <span class="cta-text">Find Out More</span>
+            </div>
+          </a>
+
+          <a href="interior-construction.html" class="service-box" style="background-color: var(--raisin-black-3);">
+            <div class="service-label">Interior & Special Construction</div>
+            <div class="overlay">
+              <span class="cta-text">Find Out More</span>
+            </div>
+          </a>
+
+          <a href="building-maintenance.html" class="service-box" style="background-color: var(--raisin-black-3);">
+            <div class="service-label">Building Maintenance</div>
+            <div class="overlay">
+              <span class="cta-text">Find Out More</span>
+            </div>
+          </a>
+
+          <a href="medical-attire.html" class="service-box" style="background-color: var(--raisin-black-3);">
+            <div class="service-label">Medical Attire</div>
+            <div class="overlay">
+              <span class="cta-text">Find Out More</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -#TEAM-->
+    <section class="section team" id="team" aria-label="team">
+    <div class="container">
+
+      <h2 class="h2 section-title">Our Team</h2>
+
+      <div class="team-wrapper">
+
+        <!-- Team Member -->
+        <div class="team-card" data-aos="fade-right">
+          <h3 class="team-name">RAZMAN BIN KAMARUDIN</h3>
+          <h4 class="team-role">Managing Director</h4>
+          <p class="team-bio">
+            Razman Kamarudin was the Contracts Manager at a Public Listed Company and brings 24 years of experience 
+            in the construction industry. With expertise in both residential and non-residential projects including 
+            government housing developments over the past 15 years, he has a proven track record of delivering 
+            high-quality results. Skilled in leadership, teamwork, and collaboration, he ensures smooth project 
+            execution and long-term success.
           </p>
         </div>
+
+        <!-- Team Member -->
+        <div class="team-card" data-aos="fade-right">
+          <h3 class="team-name">NORHASREEN HAMZAH</h3>
+          <h4 class="team-role">Director</h4>
+          <p class="team-bio">
+            Norhasreen Hamzah is a highly skilled engineering professional specializing in project management, 
+            design supervision, and construction. With prior experience as a Resident Engineer at Arup, he managed 
+            the development of a 4-Storey Data Center for NEXTDC Sdn Bhd, and has overseen multiple infrastructure 
+            projects. Certified in IS1:2, he ensures adherence to safety standards, quality assurance, and 
+            timely project delivery.
+          </p>
+        </div>
+
+        <!-- Team Member -->
+        <div class="team-card" data-aos="fade-right">
+          <h3 class="team-name">NURUL IDALIS BINTI ABDUL GHANI</h3>
+          <h4 class="team-role">General Manager</h4>
+          <p class="team-bio">
+            An expert leading the Integrated System Department, she brings 18 years of global experience in Project 
+            Management, Software Development, ERP, and Process Improvement. She ensures IT systems align with business 
+            goals, oversees delivery phases, and defines standards and best practices for quality and consistency, 
+            supporting cross-functional projects and decision-making across the company.
+          </p>
+        </div>
+
       </div>
 
-      <div class="wave" aria-hidden="true"></div>
+    </div>
+  </section>
 
-      <footer>
-        <div>© <span id="year"></span> NovaaGroup. All rights reserved.</div>
-        <div class="small">Need help now? Email <a href="mailto:support@novaagroup.com">admin@novaagroup.com</a>.</div>
-      </footer>
-    </section>
+  <section class="section projects" id="projects" aria-label="Projects">
+    <div class="container">
+
+      <h2 class="h2 section-title">Completed Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="project-block">
+        <h2 class="project-title">Gallery, Pusat Rehabilitasi PERKESO Tun Abdul Razak, Melaka</h2>
+
+        <div class="project-gallery">
+          <img src="assets/images/project1-img1.jpeg" alt="">
+          <img src="assets/images/project1-img2.jpeg" alt="">
+          <img src="assets/images/project1-img3.jpeg" alt="">
+          <img src="assets/images/project1-img4.jpeg" alt="">
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-block">
+        <h3 class="project-title">Supply scrub Uniform for SOCSORehabilitation Center’s member</h3>
+        <div class="project-gallery">
+          <img src="assets/images/project2-img1.jpeg" alt="">
+          <img src="assets/images/project2-img2.jpeg" alt="">
+          <img src="assets/images/project2-img3.jpeg" alt="">
+          <img src="assets/images/project2-img4.jpeg" alt="">
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-block">
+        <h3 class="project-title">Supply and install underwater treadmills and butterfly shaped bath for Secure Logic Tech Sdn. Bhd.</h3>
+
+        <div class="project-gallery">
+          <img src="assets/images/project3-img1.jpeg" alt="">
+          <img src="assets/images/project3-img2.jpeg" alt="">
+          <img src="assets/images/project3-img3.jpeg" alt="">
+          <img src="assets/images/project3-img4.jpeg" alt="">
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-block">
+        <h3 class="project-title">Supply and install sauna, lower limb whirlpool and upper limb whirlpool for Secure Logic Tech Sdn. Bhd.</h3>
+        <div class="project-gallery">
+          <img src="assets/images/project4-img1.jpeg" alt="">
+          <img src="assets/images/project4-img2.jpeg" alt="">
+          <img src="assets/images/project4-img3.jpeg" alt="">
+          <img src="assets/images/project4-img4.jpeg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    </article>
   </main>
 
-  <script>
-    // Update timestamps and a lightweight reference id for support tickets
-    (function(){
-      const now = new Date();
-      const opts = { year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit', second:'2-digit' };
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      const t = new Intl.DateTimeFormat(undefined, opts).format(now);
-      document.getElementById('lastUpdated').textContent = `${t} (${tz})`;
-      document.getElementById('year').textContent = now.getFullYear();
-      // quick unique-ish ref: yymmdd-hhmmss
-      const pad = n => String(n).padStart(2,'0');
-      const ref = `${String(now.getFullYear()).slice(2)}${pad(now.getMonth()+1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
-      document.getElementById('rand').textContent = ref;
-    })();
-  </script>
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" id="contact">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">NOVAA Group Sdn Bhd (1597613-A)</a>
+          
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <address class="item-text">
+                        VC-03-05 Edusentral,
+                        <br>Jalan Setia Murni U13/51,
+                        <br>Setia Alam 40170, 
+                        <br>Shah Alam, Selangor.
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <a href="tel:+241245654235" class="item-text">+603-3006 5709</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-open"></ion-icon>
+              </div>
+
+              <a href="mailto:info@exemple.com" class="item-text">admin.novaa@novaagrp.com</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="business-outline"></ion-icon>
+              </div>
+
+              <a class="item-text">Monday - Friday: 8.30AM - 5.30PM</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-wrapper">
+          <p class="footer-list-title">Reach Out to Us</p>
+          <div class="contact-form-wrapper">
+
+          <form id="contact-form" target="_blank" action="https://formsubmit.co/alyssa210303@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none"> 
+
+            <div class="row100">
+              <div class="inputBox50">
+                <input type="text" name="name" placeholder="Full Name" required>
+              </div>
+              <div class="inputBox50">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <input type="text" name="_subject" placeholder="Subject" class="single-line-input" required>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <textarea name="message" placeholder="Message" class="large-message-box" required></textarea>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <button type="submit" class="btn-submit">SEND</button>
+              </div>
+            </div>
+
+            <div id="form-status" class="form-status-message"></div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy;<a href="#" class="copyright-link"></a>
+          2025 NOVAA Group Sdn. Bhd.
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000,
+        });
+    </script>
 </body>
+
 </html>
