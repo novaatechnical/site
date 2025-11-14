@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVAA Group | Wayfinding & Navigation</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="index.html#home" class="logo">
+          <img src="assets/images/logoheader.png" alt="NOVAA Group Logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="index.html#home" class="navbar-link skewBg" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index.html#about" class="navbar-link skewBg" data-nav-link>About</a>
+            </li>
+
+            <li class="navbar-item dropdown">
+            <a href="#" class="navbar-link dropdown-toggle" onclick="toggleDropdown(event)">Services ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="wayfinding-navigation.html" class="dropdown-link">Wayfinding & Navigation</a></li>
+                <li><a href="interior-construction.html" class="dropdown-link">Interior & Special Construction</a></li>
+                <li><a href="building-maintenance.html" class="dropdown-link">Building Maintenance</a></li>
+                <li><a href="medical-attire.html" class="dropdown-link">Medical Attire</a></li>
+            </ul>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index.html#contact" class="navbar-link skewBg" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+
+          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="menu"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+
+    <section class="section policies" id="policy" aria-label="company policy">
+      <div class="container">
+            <h2 class="h2 section-title">Integrated Wayfinding & Navigation</h2>
+
+            <p class="section-text2" style="--color: var(--light-gray-2);">
+            Our Integrated Wayfinding & Navigation service is designed to enhance user experience by providing clear, 
+            intuitive, and cohesive guidance across physical and digital spaces. We specialize in creating end-to-end 
+            navigation solutions that help people move through complex environments with confidence and ease. 
+            Whether it’s a hospital, airport, shopping mall, campus, transportation hub, or mixed-use development, 
+            we tailor every system to suit the unique needs of the space, its users, and stakeholders.
+            </p>
+
+            <h3 class="h3 section-title2"><br><br>Services</h3>
+
+            <ul class="listbox">
+                <li>Strategic Planning & Analysis: Understanding people flow, key destinations, and accessibility to design an effective strategy.</li>
+                <li>Design & Branding Integration: Visually aligned signage and navigation systems that reflect your brand identity across all platforms.</li>
+                <li>Physical Signage & Environmental Graphics: Directional, informational, and identification signage to reduce confusion.</li>
+                <li>Digital Wayfinding Solutions: Interactive directories, real-time mapping apps, and integrated navigation platforms.</li>
+                <li>Smart Navigation Technologies: GPS, QR codes, Lidar Robots, IoT — for real-time tracking, alerts, and routing.</li>
+                <li>Accessibility & Inclusivity: Compliant systems with multilingual, tactile, and audio options.</li>
+                <li>Implementation & Maintenance: Full lifecycle management with fabrication, updates, and support.</li>
+            </ul>
+
+            <h3 class="h3 section-title2"><br><br>Why it Matters</h3>
+
+            <p class="section-text2">
+            An effective wayfinding system improves user satisfaction, reduces stress and confusion, enhances safety, 
+            and promotes smoother traffic flow—making your space more welcoming, efficient, and future-ready.
+            </p>
+      </div>
+    </section>
+    </article>
+  </main>
+
+ <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" id="contact">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">NOVAA Group Sdn Bhd (1597613-A)</a>
+          
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <address class="item-text">
+                        VC-03-05 Edusentral,
+                        <br>Jalan Setia Murni U13/51,
+                        <br>Setia Alam 40170, 
+                        <br>Shah Alam, Selangor.
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <a href="tel:+241245654235" class="item-text">+603-3006 5709</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-open"></ion-icon>
+              </div>
+
+              <a href="mailto:info@exemple.com" class="item-text">admin.novaa@novaagrp.com</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="business-outline"></ion-icon>
+              </div>
+
+              <a class="item-text">Monday - Friday: 8.30AM - 5.30PM</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-wrapper">
+          <p class="footer-list-title">Reach Out to Us</p>
+          <div class="contact-form-wrapper">
+
+          <form id="contact-form" target="_blank" action="https://formsubmit.co/alyssa210303@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none"> 
+
+            <div class="row100">
+              <div class="inputBox50">
+                <input type="text" name="name" placeholder="Full Name" required>
+              </div>
+              <div class="inputBox50">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <input type="text" name="_subject" placeholder="Subject" class="single-line-input" required>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <textarea name="message" placeholder="Message" class="large-message-box" required></textarea>
+              </div>
+            </div>
+
+            <div class="row100">
+              <div class="inputBox100">
+                <button type="submit" class="btn-submit">SEND</button>
+              </div>
+            </div>
+
+            <div id="form-status" class="form-status-message"></div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy;<a href="#" class="copyright-link"></a>
+          2025 NOVAA Group Sdn. Bhd.
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init({
+          offset: 300,
+          duration: 2000,
+      });
+  </script>
+</body>
+
+</html>
