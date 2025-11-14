@@ -502,7 +502,7 @@ body {
     font-size: 30px;
     border: 1px solid var(--white);
     padding: 4px;
-    position: absolute;
+    position: relative;
     z-index: 10000; 
 }
 
@@ -792,7 +792,7 @@ TEAM
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 2px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -1204,6 +1204,7 @@ TEAM
 .nav-toggle-btn { display: none; }
 
 .navbar,
+
 .navbar.active {
     all: unset;
     margin-inline: auto 15px;
