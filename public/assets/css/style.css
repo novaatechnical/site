@@ -63,6 +63,7 @@
 * spacing
 */
 
+--section-small-padding: 50px;
 --section-padding: 120px;
 
 /**
@@ -146,7 +147,9 @@ html {
 
 body {
     background-color: var(--raisin-black-3);
-    font-size: 1.6rem;
+    font-size: fs-6;
+    font-family: var(--ff-poppins);
+    color:white;
     line-height: 1.5;
 }
 
@@ -162,7 +165,16 @@ body {
 
 .container { padding-inline: 15px; }
 
-.section { padding-block: var(--section-padding); }
+.section { 
+  padding-block: var(--section-padding); 
+  text-align: center;
+}
+
+.section-small { 
+  padding-block: var(--section-small-padding); 
+  margin-bottom: 50px;
+  text-align: center;
+}
 
 .h1,
 .h2,
@@ -349,7 +361,7 @@ body {
     position: relative;
     padding-left: 34px;             
     color: var(--white);
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-500);
     font-size: var(--fs-7);
     line-height: 1.6;
 }
@@ -703,6 +715,7 @@ TEAM
 
 .team{
     background-color: var(--raisin-black-4);
+    text-align: start;
 }
 
 .team-wrapper {
