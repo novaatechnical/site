@@ -28,16 +28,21 @@
 <nav class="navbar navbar-dark p-3 sticky-top">
     <div class="container-fluid px-4 px-lg-5 d-flex align-items-center position-relative">
 
-        <!-- Desktop: MENU Left (HIDDEN on mobile) -->
-        <button class="btn text-white d-none d-lg-flex align-items-center gap-2"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#sidebar"
-                aria-label="Open menu">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
-        <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
-            MENU
-        </span>
-        </button>
+        <!-- Desktop: MENU & HOME Left (HIDDEN on mobile) -->
+        <div class="d-none d-lg-flex align-items-center gap-4">
+            <button class="btn text-white d-flex align-items-center gap-2"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar"
+                    aria-label="Open menu"
+                    style="padding-left: 0;">
+            <ion-icon name="menu-outline" size="large"></ion-icon>
+            <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
+                MENU
+            </span>
+            </button>
+            
+
+        </div>
 
         <!-- Logo -->
         <a class="navbar-brand m-0" href="index.html">
@@ -90,6 +95,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="index.html">Home</a>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link text-white" href="about.html">About</a>
@@ -186,42 +192,7 @@
       </div>
     </div>
 
-    <!-- Stats Row -->
-    <div class="row g-4 mt-5">
 
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-            <div class="about-stat-card">
-                <ion-icon name="calendar-outline" class="stat-icon"></ion-icon>
-                <div class="stat-number" data-target="2024" data-suffix="">2024</div>
-                <div class="stat-label">Year Founded</div>
-            </div>
-        </div>
-
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-            <div class="about-stat-card">
-                <ion-icon name="cube-outline" class="stat-icon"></ion-icon>
-                <div class="stat-number" data-target="3" data-suffix="+">3+</div>
-                <div class="stat-label">Core Services</div>
-            </div>
-        </div>
-
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="about-stat-card">
-                <ion-icon name="briefcase-outline" class="stat-icon"></ion-icon>
-                <div class="stat-number" data-target="4" data-suffix="+">4+</div>
-                <div class="stat-label">Projects Completed</div>
-            </div>
-        </div>
-
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
-            <div class="about-stat-card">
-                <ion-icon name="people-outline" class="stat-icon"></ion-icon>
-                <div class="stat-number" data-target="10" data-suffix="+">10+</div>
-                <div class="stat-label">Team Members</div>
-            </div>
-        </div>
-
-    </div>
   </div>
 </section>
 
@@ -338,17 +309,7 @@ SEND
 © 2025 NOVAA Group Sdn. Bhd.
 </p>
 
-<div class="social-icons">
-    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
-        <ion-icon name="logo-linkedin"></ion-icon>
-    </a>
-    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook">
-        <ion-icon name="logo-facebook"></ion-icon>
-    </a>
-    <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
-        <ion-icon name="logo-instagram"></ion-icon>
-    </a>
-</div>
+
 
 </div>
 </div>

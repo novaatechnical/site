@@ -28,16 +28,21 @@
 <nav class="navbar navbar-dark p-3 sticky-top">
     <div class="container-fluid px-4 px-lg-5 d-flex align-items-center position-relative">
 
-        <!-- Desktop: MENU Left (HIDDEN on mobile) -->
-        <button class="btn text-white d-none d-lg-flex align-items-center gap-2"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#sidebar"
-                aria-label="Open menu">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
-        <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
-            MENU
-        </span>
-        </button>
+        <!-- Desktop: MENU & HOME Left (HIDDEN on mobile) -->
+        <div class="d-none d-lg-flex align-items-center gap-4">
+            <button class="btn text-white d-flex align-items-center gap-2"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar"
+                    aria-label="Open menu"
+                    style="padding-left: 0;">
+            <ion-icon name="menu-outline" size="large"></ion-icon>
+            <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
+                MENU
+            </span>
+            </button>
+            
+
+        </div>
 
         <!-- Logo -->
         <a class="navbar-brand m-0" href="index.html">
@@ -90,6 +95,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="index.html">Home</a>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link text-white" href="about.html">About</a>
@@ -550,17 +556,7 @@ SEND
 © 2025 NOVAA Group Sdn. Bhd.
 </p>
 
-<div class="social-icons">
-    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
-        <ion-icon name="logo-linkedin"></ion-icon>
-    </a>
-    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook">
-        <ion-icon name="logo-facebook"></ion-icon>
-    </a>
-    <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
-        <ion-icon name="logo-instagram"></ion-icon>
-    </a>
-</div>
+
 
 </div>
 </div>
