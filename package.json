@@ -1,0 +1,16 @@
+{
+  "name": "novaa-site",
+  "version": "1.0.0",
+  "description": "NOVAA Group Sdn. Bhd. Website",
+  "scripts": {
+    "dev": "live-server public --port=3000 --watch=public",
+    "serve": "npx firebase-tools serve --only hosting",
+    "deploy": "npx firebase-tools deploy --only hosting"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

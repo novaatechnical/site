@@ -28,18 +28,23 @@
 <body>
 
 <nav class="navbar navbar-dark p-3 sticky-top">
-    <div class="container d-flex align-items-center position-relative">
+    <div class="container-fluid px-4 px-lg-5 d-flex align-items-center position-relative">
 
-        <!-- Desktop: MENU Left (HIDDEN on mobile) -->
-        <button class="btn text-white d-none d-lg-flex align-items-center gap-2"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#sidebar"
-                aria-label="Open menu">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
-        <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
-            MENU
-        </span>
-        </button>
+        <!-- Desktop: MENU & HOME Left (HIDDEN on mobile) -->
+        <div class="d-none d-lg-flex align-items-center gap-4">
+            <button class="btn text-white d-flex align-items-center gap-2"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar"
+                    aria-label="Open menu"
+                    style="padding-left: 0;">
+            <ion-icon name="menu-outline" size="large"></ion-icon>
+            <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
+                MENU
+            </span>
+            </button>
+            
+
+        </div>
 
         <!-- Logo -->
         <a class="navbar-brand m-0" href="index.html">
@@ -93,6 +98,7 @@
                 <a class="nav-link text-white" href="index.html">Home</a>
             </li>
 
+
             <li class="nav-item">
                 <a class="nav-link text-white" href="about.html">About</a>
             </li>
@@ -106,19 +112,23 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" style="font-weight: var(--fw-700)">Services</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-attire.html">Medical Attire</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-equipment-rehabilitation.html">Medical and Rehabilitation Equipment Supply</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="interior-construction.html">Interior and Special Construction</a>
+                <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse" style="font-weight: var(--fw-700); letter-spacing: 0.5px; padding-right: 20px;">
+                    Services
+                    <ion-icon name="chevron-down-outline" style="font-size: 1.1rem; color: var(--marigold);"></ion-icon>
+                </a>
+                <div class="collapse" id="servicesCollapse">
+                    <ul class="list-unstyled ms-3 mb-3 mt-2" style="border-left: 2px solid rgba(234,179,8,0.3); padding-left: 15px; display: flex; flex-direction: column; gap: 12px;">
+                        <li>
+                            <a class="sub-nav-link" href="medical-attire.html">Medical Attire</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="medical-equipment-rehabilitation.html">Medical & Rehabilitation Equipment Supply</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="interior-construction.html">Interior & Special Construction</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -132,16 +142,17 @@
     </div>
 </div>
 
-<section class="mt-5">
+<section class="section-padding">
   <div class="container py-5">
 
     <!-- Title -->
-    <div class="row justify-content-center text-center mb-5" style="padding-bottom: 100px;">
-      <div class="col-lg-8">
+    <div class="row justify-content-center text-center mb-5" style="padding-bottom: 50px;">
+      <div class="col-lg-8" data-aos="fade-up">
         <h2 style="font-family: var(--ff-oxanium);
                    font-weight: var(--fw-800);
                    color: var(--white);">
           Medical Equipment & Rehabilitation Equipment Supply
+          <span class="section-header-line"></span>
         </h2>
 
         <p class="mt-4"
@@ -157,11 +168,9 @@
 
     <!-- SERVICES -->
     <div class="row justify-content-center mb-5" style="padding-bottom: 100px;">
-        <div class="col-lg-10">
+        <div class="col-lg-10" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="p-5 rounded"
-                style="background-color: var(--raisin-black-4);
-                        border: 1px solid var(--white_10);">
+            <div class="glass-card p-5 text-start">
 
             <!-- Title -->
             <div class="text-center mb-4">
@@ -170,27 +179,25 @@
                         font-size: var(--fs-10);
                         font-family: var(--ff-oxanium);">
                 WHAT WE OFFER
-                <span class="d-block mx-auto mt-2"
-                        style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-                </span>
+                <span class="section-header-line"></span>
                 </h4>
             </div>
 
             <!-- Content -->
             <ul class="list-unstyled text-light" style="line-height: 1.9;">
 
-                <li class="mb-2">
-                <strong style="color: var(--marigold)">Medical Equipment</strong><br>
+                <li class="mb-4">
+                <strong style="color: var(--marigold); font-size: 1.1rem;">Medical Equipment</strong><br>
                 Clinical and diagnostic devices for professional healthcare use.
                 <em>(Examples: patient monitors, oxygen concentrators, examination beds)</em>
                 </li>
 
                 <li>
-                <strong style="color: var(--marigold)">Rehabilitation Equipment</strong>
-                <br> Hydrotherapy Equipment – water-based therapy tools for muscle relaxation and rehabilitation.
-                <br> Physiotherapy Equipment – devices for electrotherapy, traction, exercise, and therapy treatments. 
-                <br> Mobility Enhancement Equipment – wheelchairs, walkers, gait trainers, and other mobility aids. 
-                <br> Other Rehabilitation Solutions – orthopaedic supports, balance and coordination tools, and therapy accessories.
+                <strong style="color: var(--marigold); font-size: 1.1rem;">Rehabilitation Equipment</strong>
+                <br> <span class="text-white">Hydrotherapy Equipment</span> – water-based therapy tools for muscle relaxation and rehabilitation.
+                <br> <span class="text-white">Physiotherapy Equipment</span> – devices for electrotherapy, traction, exercise, and therapy treatments. 
+                <br> <span class="text-white">Mobility Enhancement Equipment</span> – wheelchairs, walkers, gait trainers, and other mobility aids. 
+                <br> <span class="text-white">Other Rehabilitation Solutions</span> – orthopaedic supports, balance and coordination tools, and therapy accessories.
                 </li>
             </ul>
 
@@ -202,23 +209,23 @@
 
     <!--Images-->
     <div class="container mb-5" style="padding-bottom: 100px;">
-      <div class="row g-4 justify-content-center" data-aos="fade-up">
+      <div class="row g-4 justify-content-center" data-aos-stagger>
 
-        <div class="col-lg-4">
-          <div class="equipment-img rounded overflow-hidden">
-            <img src="assets/images/equipment-img1.jpeg" class="w-100 h-100 object-fit-cover">
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="rounded overflow-hidden" style="background: #fff; padding: 16px; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/images/equipment-img1.jpeg" class="w-100" style="object-fit: contain;">
           </div>
         </div>
 
-        <div class="col-lg-4">
-          <div class="equipment-img rounded overflow-hidden">
-            <img src="assets/images/equipment-img2.jpeg" class="w-100 h-100 object-fit-cover">
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="rounded overflow-hidden" style="background: #fff; padding: 16px; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/images/equipment-img2.jpeg" class="w-100" style="object-fit: contain;">
           </div>
         </div>
 
-        <div class="col-lg-4">
-          <div class="equipment-img rounded overflow-hidden">
-            <img src="assets/images/equipment-img3.jpeg" class="w-100 h-100 object-fit-cover">
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="rounded overflow-hidden" style="background: #fff; padding: 16px; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/images/equipment-img3.jpeg" class="w-100" style="object-fit: contain;">
           </div>
         </div>
 
@@ -227,41 +234,39 @@
 
     <!-- Why Choose Us -->
     <div class="row justify-content-center mb-5" style="padding-bottom: 100px;">
-      <div class="col-12">
+      <div class="col-12" data-aos="fade-up">
 
-        <div class="text-center mb-4">
+        <div class="text-center mb-5">
           <h4 class="text-white position-relative d-inline-block"
               style="font-weight: var(--fw-700); font-size: var(--fs-10); font-family: var(--ff-oxanium);">
             WHY CHOOSE US
-            <span class="d-block mx-auto mt-2"
-                  style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-            </span>
+            <span class="section-header-line"></span>
           </h4>
         </div>
 
         <div class="container">
-          <div class="row g-4 text-center">
+          <div class="row g-4 text-center" data-aos-stagger>
 
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="p-2 text-white">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+              <div class="glass-card h-100 d-flex align-items-center justify-content-center text-white">
                 Registered and licensed with MDA Malaysia
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="p-2 text-white">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+              <div class="glass-card h-100 d-flex align-items-center justify-content-center text-white">
                 Certified, high-quality, and compliant products
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="p-2 text-white">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+              <div class="glass-card h-100 d-flex align-items-center justify-content-center text-white">
                 Customised equipment solutions based on your facility’s requirements
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="p-2 text-white">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+              <div class="glass-card h-100 d-flex align-items-center justify-content-center text-white">
                 Competitive pricing with warranty and after-sales support
               </div>
             </div>
@@ -274,24 +279,22 @@
 
     <!-- Who We Serve -->
     <div class="row justify-content-center mb-5">
-      <div class="col-lg-8">
+      <div class="col-lg-8" data-aos="fade-up">
 
         <div class="text-center mb-4">
           <h4 class="text-white position-relative d-inline-block"
               style="font-weight: var(--fw-700); font-size: var(--fs-10); font-family: var(--ff-oxanium);">
             WHO WE SERVE
-            <span class="d-block mx-auto mt-2"
-                  style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-            </span>
+            <span class="section-header-line"></span>
           </h4>
         </div>
 
-        <ul class="list-group list-group-flush text-center">
-          <li class="list-group-item bg-transparent text-light border-secondary">Hospitals & Clinics</li>
-          <li class="list-group-item bg-transparent text-light border-secondary">Physiotherapy & Rehabilitation Centres</li>
-          <li class="list-group-item bg-transparent text-light border-secondary">Elderly Care Homes</li>
-          <li class="list-group-item bg-transparent text-light border-secondary">Home-Care Patients</li>
-          <li class="list-group-item bg-transparent text-light border-secondary">Corporate & Occupational Health Providers</li>
+        <ul class="list-group list-group-flush text-center policy-list">
+          <li class="list-group-item bg-transparent text-light py-3 border-secondary" style="border-color: var(--white_10) !important;">Hospitals & Clinics</li>
+          <li class="list-group-item bg-transparent text-light py-3 border-secondary" style="border-color: var(--white_10) !important;">Physiotherapy & Rehabilitation Centres</li>
+          <li class="list-group-item bg-transparent text-light py-3 border-secondary" style="border-color: var(--white_10) !important;">Elderly Care Homes</li>
+          <li class="list-group-item bg-transparent text-light py-3 border-secondary" style="border-color: var(--white_10) !important;">Home-Care Patients</li>
+          <li class="list-group-item bg-transparent text-light py-3 border-secondary" style="border-color: transparent !important;">Corporate & Occupational Health Providers</li>
         </ul>
 
       </div>
@@ -301,8 +304,7 @@
 </section>
 
 <!-- FOOTER -->
-
-<div class="w-100" style="height: 1px; background-color: var(--marigold);"></div>
+<div class="w-100 footer-divider"></div>
 
 <footer class="text-white pt-5" id="contact" >
 
@@ -311,7 +313,7 @@
 <div class="row g-5">
 
 <!-- LEFT COLUMN -->
-<div class="col-lg-5" style="font-family: var(--ff-oxanium);">
+<div class="col-lg-5" style="font-family: var(--ff-oxanium);" data-aos="fade-right">
 
 <h5 class="fw-bold mb-4" style="font-size: var(--fs-7);">NOVAA Group Sdn Bhd (1597613-A)</h5>
 
@@ -351,16 +353,14 @@ admin@novaagroup.com
 </div>
 
 <!-- RIGHT COLUMN -->
-<div class="col-lg-7" style="color: var(--raisin-black-4);">
+<div class="col-lg-7" style="color: var(--raisin-black-4);" data-aos="fade-left">
     <h5 class="position-relative d-inline-block mb-4 fw-bold"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
                 font-size: var(--fs-12);
                 color: var(--roman-silver);">
         REACH OUT TO US
-        <span class="d-block mx-auto mt-2"
-                style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-        </span>
+        <span class="section-header-line"></span>
         </h5>
 
 <form id="contact-form"
@@ -390,8 +390,7 @@ admin@novaagroup.com
 </div>
 
 <div class="col-12 d-flex justify-content-end">
-<button type="submit" class="btn fw-bold px-5 p-2"
-style="background-color: var(--marigold_75); color: white; font-size: 0.7rem;">
+<button type="submit" class="btn btn-marigold px-5 p-2">
 SEND
 </button>
 </div>
@@ -408,16 +407,24 @@ SEND
 </div>
 
 <!-- FOOTER BOTTOM -->
-<div class="py-3 mt-5" style="background-color: var(--eerie-black-2); padding-left: 10dvw;">
+<div class="py-3 mt-5" style="background-color: var(--eerie-black-2);">
+<div class="footer-bottom-inner">
 
 <p class="mb-0 small" style="color: var(--roman-silver);">
 © 2025 NOVAA Group Sdn. Bhd.
 </p>
 
+
+
+</div>
 </div>
 
 </footer>
 
+<!-- Back to Top -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</button>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -427,10 +434,15 @@ SEND
 <!-- AOS library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-        AOS.init({
-            offset: 300,
-            duration: 2000,
-        });
-    </script>
+    AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+    });
+</script>
+
+<!-- Custom JS -->
+<script src="./assets/js/script.js"></script>
 </body>
 </html>

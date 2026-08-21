@@ -26,18 +26,23 @@
 <body>
 
 <nav class="navbar navbar-dark p-3 sticky-top">
-    <div class="container d-flex align-items-center position-relative">
+    <div class="container-fluid px-4 px-lg-5 d-flex align-items-center position-relative">
 
-        <!-- Desktop: MENU Left (HIDDEN on mobile) -->
-        <button class="btn text-white d-none d-lg-flex align-items-center gap-2"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#sidebar"
-                aria-label="Open menu">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
-        <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
-            MENU
-        </span>
-        </button>
+        <!-- Desktop: MENU & HOME Left (HIDDEN on mobile) -->
+        <div class="d-none d-lg-flex align-items-center gap-4">
+            <button class="btn text-white d-flex align-items-center gap-2"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar"
+                    aria-label="Open menu"
+                    style="padding-left: 0;">
+            <ion-icon name="menu-outline" size="large"></ion-icon>
+            <span style="font-family: var(--ff-oxanium); font-weight: var(--fw-600);">
+                MENU
+            </span>
+            </button>
+            
+
+        </div>
 
         <!-- Logo -->
         <a class="navbar-brand m-0" href="index.html">
@@ -91,6 +96,7 @@
                 <a class="nav-link text-white" href="index.html">Home</a>
             </li>
 
+
             <li class="nav-item">
                 <a class="nav-link text-white" href="about.html">About</a>
             </li>
@@ -104,19 +110,23 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" style="font-weight: var(--fw-700)">Services</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-attire.html">Medical Attire</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-equipment-rehabilitation.html">Medical and Rehabilitation Equipment Supply</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="interior-construction.html">Interior and Special Construction</a>
+                <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse" style="font-weight: var(--fw-700); letter-spacing: 0.5px; padding-right: 20px;">
+                    Services
+                    <ion-icon name="chevron-down-outline" style="font-size: 1.1rem; color: var(--marigold);"></ion-icon>
+                </a>
+                <div class="collapse" id="servicesCollapse">
+                    <ul class="list-unstyled ms-3 mb-3 mt-2" style="border-left: 2px solid rgba(234,179,8,0.3); padding-left: 15px; display: flex; flex-direction: column; gap: 12px;">
+                        <li>
+                            <a class="sub-nav-link" href="medical-attire.html">Medical Attire</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="medical-equipment-rehabilitation.html">Medical & Rehabilitation Equipment Supply</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="interior-construction.html">Interior & Special Construction</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -130,19 +140,37 @@
     </div>
 </div>
 
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-dot-grid"></div>
+    <div class="container page-hero-content">
+        <div data-aos="fade-up">
+            <span class="page-hero-eyebrow">NOVAA Group</span>
+            <h1>Mission &amp; Vision</h1>
+            <p>Our guiding purpose and long-term direction, built on a foundation of trust, integrity, and ambition.</p>
+            <nav class="page-hero-breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">&#9656;</span>
+                <span class="current">Mission &amp; Vision</span>
+            </nav>
+        </div>
+    </div>
+</section>
+
 <!-- MISSION & VISION -->
-<section class="mt-5" style="padding-bottom: 100px;">
-    <div class="container py-5">
+<section class="section-padding">
+    <div class="container">
 
         <div class="row justify-content-center">
-            <div class="col-lg-7 text-center">
+            <div class="col-lg-8 text-center">
 
-            <div class="mb-5">
-                <h2 class="mb-3"
+            <div class="mb-5 glass-card" data-aos="fade-up">
+                <h2 class="mb-4"
                     style="font-family: var(--ff-oxanium);
                         font-weight: var(--fw-800);
                         color: var(--white);">
                 MISSION
+                <span class="section-header-line"></span>
                 </h2>
 
                 <p style="color: var(--light-gray-2); line-height: 1.8;">
@@ -152,25 +180,79 @@
                 </p>
             </div>
 
-            <h2 class="mb-3"
-                style="font-family: var(--ff-oxanium);
-                        font-weight: var(--fw-800);
-                        color: var(--white);">
-                VISION
-            </h2>
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="mb-4"
+                    style="font-family: var(--ff-oxanium);
+                            font-weight: var(--fw-800);
+                            color: var(--white);">
+                    VISION
+                    <span class="section-header-line"></span>
+                </h2>
 
-            <p style="color: var(--light-gray-2); line-height: 1.8;">
-                Our vision is to be a multifaceted corporation known for exceptional reputation in quality and innovation.
-            </p>
+                <p style="color: var(--light-gray-2); line-height: 1.8;">
+                    Our vision is to be a multifaceted corporation known for exceptional reputation in quality and innovation.
+                </p>
+            </div>
 
             </div>
         </div>
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- CORE VALUES -->
+<section style="padding: 0 0 80px;">
+    <div class="container">
 
-<div class="w-100" style="height: 1px; background-color: var(--marigold);"></div>
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="page-hero-eyebrow justify-content-center mb-3">What Drives Us</div>
+            <h2 style="font-family: var(--ff-oxanium); font-weight: var(--fw-800); color: var(--white); font-size: 1.8rem;">
+                Our Core Values
+                <span class="section-header-line"></span>
+            </h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="value-card h-100">
+                    <ion-icon name="ribbon-outline" class="value-card-icon"></ion-icon>
+                    <h5>Integrity</h5>
+                    <p>We act with honesty and transparency in every interaction with clients, partners, and stakeholders.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                <div class="value-card h-100">
+                    <ion-icon name="star-outline" class="value-card-icon"></ion-icon>
+                    <h5>Excellence</h5>
+                    <p>We pursue the highest standards of quality and performance in everything we deliver.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="value-card h-100">
+                    <ion-icon name="bulb-outline" class="value-card-icon"></ion-icon>
+                    <h5>Innovation</h5>
+                    <p>We embrace forward-thinking solutions that create new value and drive sustainable growth.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+                <div class="value-card h-100">
+                    <ion-icon name="heart-outline" class="value-card-icon"></ion-icon>
+                    <h5>Customer Focus</h5>
+                    <p>We place our clients at the center of every decision, building trust through consistent delivery.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<div class="w-100 footer-divider"></div>
 
 <footer class="text-white pt-5" id="contact" >
 
@@ -179,7 +261,7 @@
 <div class="row g-5">
 
 <!-- LEFT COLUMN -->
-<div class="col-lg-5" style="font-family: var(--ff-oxanium);">
+<div class="col-lg-5" style="font-family: var(--ff-oxanium);" data-aos="fade-right">
 
 <h5 class="fw-bold mb-4" style="font-size: var(--fs-7);">NOVAA Group Sdn Bhd (1597613-A)</h5>
 
@@ -219,16 +301,14 @@ admin@novaagroup.com
 </div>
 
 <!-- RIGHT COLUMN -->
-<div class="col-lg-7" style="color: var(--raisin-black-4);">
+<div class="col-lg-7" style="color: var(--raisin-black-4);" data-aos="fade-left">
     <h5 class="position-relative d-inline-block mb-4 fw-bold"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
                 font-size: var(--fs-12);
                 color: var(--roman-silver);">
         REACH OUT TO US
-        <span class="d-block mx-auto mt-2"
-                style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-        </span>
+        <span class="section-header-line"></span>
         </h5>
 
 <form id="contact-form"
@@ -258,8 +338,7 @@ admin@novaagroup.com
 </div>
 
 <div class="col-12 d-flex justify-content-end">
-<button type="submit" class="btn fw-bold px-5 p-2"
-style="background-color: var(--marigold_75); color: white; font-size: 0.7rem;">
+<button type="submit" class="btn btn-marigold px-5 p-2">
 SEND
 </button>
 </div>
@@ -276,16 +355,24 @@ SEND
 </div>
 
 <!-- FOOTER BOTTOM -->
-<div class="py-3 mt-5" style="background-color: var(--eerie-black-2); padding-left: 10dvw;">
+<div class="py-3 mt-5" style="background-color: var(--eerie-black-2);">
+<div class="footer-bottom-inner">
 
 <p class="mb-0 small" style="color: var(--roman-silver);">
 © 2025 NOVAA Group Sdn. Bhd.
 </p>
 
+
+
+</div>
 </div>
 
 </footer>
 
+<!-- Back to Top -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</button>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -295,10 +382,15 @@ SEND
 <!-- AOS library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-        AOS.init({
-            offset: 300,
-            duration: 2000,
-        });
-    </script>
+    AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+    });
+</script>
+
+<!-- Custom JS -->
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
