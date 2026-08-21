@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NOVAA Group Sdn. Bhd. | About</title>
 
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
@@ -23,7 +26,7 @@
 <body>
 
 <nav class="navbar navbar-dark p-3 sticky-top">
-    <div class="container d-flex align-items-center position-relative">
+    <div class="container-fluid px-4 px-lg-5 d-flex align-items-center position-relative">
 
         <!-- Desktop: MENU Left (HIDDEN on mobile) -->
         <button class="btn text-white d-none d-lg-flex align-items-center gap-2"
@@ -101,19 +104,23 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" style="font-weight: var(--fw-700)">Services</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-attire.html">Medical Attire</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-equipment-rehabilitation.html">Medical and Rehabilitation Equipment Supply</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="interior-construction.html">Interior and Special Construction</a>
+                <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse" style="font-weight: var(--fw-700); letter-spacing: 0.5px; padding-right: 20px;">
+                    Services
+                    <ion-icon name="chevron-down-outline" style="font-size: 1.1rem; color: var(--marigold);"></ion-icon>
+                </a>
+                <div class="collapse" id="servicesCollapse">
+                    <ul class="list-unstyled ms-3 mb-3 mt-2" style="border-left: 2px solid rgba(234,179,8,0.3); padding-left: 15px; display: flex; flex-direction: column; gap: 12px;">
+                        <li>
+                            <a class="sub-nav-link" href="medical-attire.html">Medical Attire</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="medical-equipment-rehabilitation.html">Medical & Rehabilitation Equipment Supply</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="interior-construction.html">Interior & Special Construction</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -128,50 +135,100 @@
 </div>
 
 
-<!-- About Section -->
-<section class="mt-5" style="padding-bottom: 100px;">
-  <div class="container py-5">
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-dot-grid"></div>
+    <div class="container page-hero-content">
+        <div data-aos="fade-up">
+            <span class="page-hero-eyebrow">NOVAA Group</span>
+            <h1>About Us</h1>
+            <p>Delivering exceptional products and services with integrity, excellence, and a commitment to sustainable growth.</p>
+            <nav class="page-hero-breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">&#9656;</span>
+                <span class="current">About</span>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="section-padding">
+  <div class="container">
     <div class="row align-items-center g-5">
 
-        <h2 class="mb-4"
-                style="font-family: var(--ff-oxanium);
-                    font-weight: var(--fw-800);
-                    color: var(--white);
-                    text-align: center;">
-            ABOUT US
-        </h2>
-
-        
       <!-- Logo -->
-        <div class="col-lg-3 text-center d-none d-lg-block">
-            <img src="assets/images/logo.png"
-                class="img-fluid"
-                alt="NOVAA Group Logo"
-                style="max-height: 200px;">
-        </div>
-
-        <!-- Text -->
-        <div class="col-lg-9 text-center text-lg-start">
-          <p style="color: var(--light-gray-2); line-height: 1.8;">
-          At Novaa Group Sdn Bhd, we are dedicated to delivering exceptional products and services tailored to the unique needs of our clients. 
-          Since our establishment in 2024, our team of passionate and experienced professionals has worked collaboratively to provide innovative, 
-          forward-thinking solutions that empower success and sustainable growth.
-          </p>
-
-          <p style="color: var(--light-gray-2); line-height: 1.8;">
-          Driven by the core values of integrity, excellence, and customer satisfaction, 
-          we strive to build long-term partnerships grounded in trust and performance. 
-          Our mission is not only to meet expectations but to exceed them—creating meaningful impact 
-          and setting new benchmarks in every industry we serve.
-          </p>
+      <div class="col-lg-3 text-center d-none d-lg-block" data-aos="fade-right" data-aos-delay="100">
+          <img src="assets/images/logo.png"
+              class="img-fluid"
+              alt="NOVAA Group Logo"
+              style="max-height: 200px;">
       </div>
 
+      <!-- Text -->
+      <div class="col-lg-9" data-aos="fade-left" data-aos-delay="200">
+
+        <div class="page-hero-eyebrow mb-3">Who We Are</div>
+
+        <p style="color: var(--light-gray-2); line-height: 1.85; margin-bottom: 1.2rem;">
+          At Novaa Group Sdn Bhd, we are dedicated to delivering exceptional products and services tailored to the unique needs of our clients.
+          Since our establishment in 2024, our team of passionate and experienced professionals has worked collaboratively to provide innovative,
+          forward-thinking solutions that empower success and sustainable growth.
+        </p>
+
+        <p style="color: var(--light-gray-2); line-height: 1.85;">
+          Driven by the core values of integrity, excellence, and customer satisfaction,
+          we strive to build long-term partnerships grounded in trust and performance.
+          Our mission is not only to meet expectations but to exceed them—creating meaningful impact
+          and setting new benchmarks in every industry we serve.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="row g-4 mt-5">
+
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="about-stat-card">
+                <ion-icon name="calendar-outline" class="stat-icon"></ion-icon>
+                <div class="stat-number" data-target="2024" data-suffix="">2024</div>
+                <div class="stat-label">Year Founded</div>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+            <div class="about-stat-card">
+                <ion-icon name="cube-outline" class="stat-icon"></ion-icon>
+                <div class="stat-number" data-target="3" data-suffix="+">3+</div>
+                <div class="stat-label">Core Services</div>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-stat-card">
+                <ion-icon name="briefcase-outline" class="stat-icon"></ion-icon>
+                <div class="stat-number" data-target="4" data-suffix="+">4+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+            <div class="about-stat-card">
+                <ion-icon name="people-outline" class="stat-icon"></ion-icon>
+                <div class="stat-number" data-target="10" data-suffix="+">10+</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+        </div>
+
+    </div>
   </div>
 </section>
 
+
 <!-- FOOTER -->
 
-<div class="w-100" style="height: 1px; background-color: var(--marigold);"></div>
+<div class="w-100 footer-divider"></div>
 
 <footer class="text-white pt-5" id="contact" >
 
@@ -180,7 +237,7 @@
 <div class="row g-5">
 
 <!-- LEFT COLUMN -->
-<div class="col-lg-5" style="font-family: var(--ff-oxanium);">
+<div class="col-lg-5" style="font-family: var(--ff-oxanium);" data-aos="fade-right">
 
 <h5 class="fw-bold mb-4" style="font-size: var(--fs-7);">NOVAA Group Sdn Bhd (1597613-A)</h5>
 
@@ -220,16 +277,14 @@ admin@novaagroup.com
 </div>
 
 <!-- RIGHT COLUMN -->
-<div class="col-lg-7" style="color: var(--raisin-black-4);">
+<div class="col-lg-7" style="color: var(--raisin-black-4);" data-aos="fade-left">
     <h5 class="position-relative d-inline-block mb-4 fw-bold"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
                 font-size: var(--fs-12);
                 color: var(--roman-silver);">
         REACH OUT TO US
-        <span class="d-block mx-auto mt-2"
-                style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-        </span>
+        <span class="section-header-line"></span>
         </h5>
 
 <form id="contact-form"
@@ -259,8 +314,7 @@ admin@novaagroup.com
 </div>
 
 <div class="col-12 d-flex justify-content-end">
-<button type="submit" class="btn fw-bold px-5 p-2"
-style="background-color: var(--marigold_75); color: white; font-size: 0.7rem;">
+<button type="submit" class="btn btn-marigold px-5 p-2">
 SEND
 </button>
 </div>
@@ -277,16 +331,34 @@ SEND
 </div>
 
 <!-- FOOTER BOTTOM -->
-<div class="py-3 mt-5" style="background-color: var(--eerie-black-2); padding-left: 10dvw;">
+<div class="py-3 mt-5" style="background-color: var(--eerie-black-2);">
+<div class="footer-bottom-inner">
 
 <p class="mb-0 small" style="color: var(--roman-silver);">
 © 2025 NOVAA Group Sdn. Bhd.
 </p>
 
+<div class="social-icons">
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+        <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+</div>
+
+</div>
 </div>
 
 </footer>
 
+<!-- Back to Top -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</button>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -296,10 +368,15 @@ SEND
 <!-- AOS library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-        AOS.init({
-            offset: 300,
-            duration: 2000,
-        });
-    </script>
+    AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+    });
+</script>
+
+<!-- Custom JS -->
+<script src="./assets/js/script.js"></script>
 </body>
 </html>

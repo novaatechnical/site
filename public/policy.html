@@ -26,7 +26,7 @@
 <body>
 
 <nav class="navbar navbar-dark p-3 sticky-top">
-    <div class="container d-flex align-items-center position-relative">
+    <div class="container-fluid px-4 px-lg-5 d-flex align-items-center position-relative">
 
         <!-- Desktop: MENU Left (HIDDEN on mobile) -->
         <button class="btn text-white d-none d-lg-flex align-items-center gap-2"
@@ -104,19 +104,23 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" style="font-weight: var(--fw-700)">Services</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-attire.html">Medical Attire</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-equipment-rehabilitation.html">Medical and Rehabilitation Equipment Supply</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="interior-construction.html">Interior and Special Construction</a>
+                <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse" style="font-weight: var(--fw-700); letter-spacing: 0.5px; padding-right: 20px;">
+                    Services
+                    <ion-icon name="chevron-down-outline" style="font-size: 1.1rem; color: var(--marigold);"></ion-icon>
+                </a>
+                <div class="collapse" id="servicesCollapse">
+                    <ul class="list-unstyled ms-3 mb-3 mt-2" style="border-left: 2px solid rgba(234,179,8,0.3); padding-left: 15px; display: flex; flex-direction: column; gap: 12px;">
+                        <li>
+                            <a class="sub-nav-link" href="medical-attire.html">Medical Attire</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="medical-equipment-rehabilitation.html">Medical & Rehabilitation Equipment Supply</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="interior-construction.html">Interior & Special Construction</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -130,10 +134,27 @@
     </div>
 </div>
 
-<section class="mt-5">
-  <div class="container py-5">
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-dot-grid"></div>
+    <div class="container page-hero-content">
+        <div data-aos="fade-up">
+            <span class="page-hero-eyebrow">NOVAA Group</span>
+            <h1>Company Policy</h1>
+            <p>Our commitment to professionalism, quality, and continuous improvement in all we do.</p>
+            <nav class="page-hero-breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">&#9656;</span>
+                <span class="current">Company Policy</span>
+            </nav>
+        </div>
+    </div>
+</section>
 
-    <div class="row justify-content-center">
+<section class="section-padding">
+  <div class="container">
+
+    <div class="row justify-content-center" data-aos="fade-up">
       <div class="col-lg-8 text-center">
 
         <h2 class="mb-5"
@@ -141,6 +162,7 @@
                    font-weight: var(--fw-800);
                    color: var(--white);">
           COMPANY POLICY
+          <span class="section-header-line"></span>
         </h2>
 
         <p class="mb-4"
@@ -153,38 +175,40 @@
     </div>
 
     <!-- Policy List -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
       <div class="col-lg-8">
 
-        <ul class="list-group list-group-flush"
-            style="background-color: var(--marigold_75); border-radius: 10px; text-align: center; padding: 5px;">
+        <div class="glass-card p-4">
+            <ul class="list-group list-group-flush policy-list"
+                style="background-color: transparent; border-radius: 10px; text-align: center;">
 
-          <li class="list-group-item text-black"
-              style="background-color: transparent; border-color: transparent;">
-            Upholding professionalism, integrity, and excellence in all our activities
-          </li>
+            <li class="list-group-item text-white py-3"
+                style="background-color: transparent; border-color: var(--white_10);">
+                Upholding professionalism, integrity, and excellence in all our activities
+            </li>
 
-          <li class="list-group-item text-black"
-              style="background-color: transparent; border-color: transparent;">
-            Continuously improving our processes and performance
-          </li>
+            <li class="list-group-item text-white py-3"
+                style="background-color: transparent; border-color: var(--white_10);">
+                Continuously improving our processes and performance
+            </li>
 
-          <li class="list-group-item text-black"
-              style="background-color: transparent; border-color: transparent;">
-            Complying with all applicable legal, statutory, and customer requirements
-          </li>
+            <li class="list-group-item text-white py-3"
+                style="background-color: transparent; border-color: var(--white_10);">
+                Complying with all applicable legal, statutory, and customer requirements
+            </li>
 
-          <li class="list-group-item text-black"
-              style="background-color: transparent">
-            Empowering our people through training, teamwork, and leadership
-          </li>
+            <li class="list-group-item text-white py-3"
+                style="background-color: transparent; border-color: transparent;">
+                Empowering our people through training, teamwork, and leadership
+            </li>
 
-        </ul>
+            </ul>
+        </div>
 
       </div>
     </div>
 
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="300">
       <div class="col-lg-8 text-center">
 
         <p style="color: var(--light-gray-2); line-height: 1.8;">
@@ -200,8 +224,7 @@
 </section>
 
 <!-- FOOTER -->
-
-<div class="w-100" style="height: 1px; background-color: var(--marigold);"></div>
+<div class="w-100 footer-divider"></div>
 
 <footer class="text-white pt-5" id="contact" >
 
@@ -210,7 +233,7 @@
 <div class="row g-5">
 
 <!-- LEFT COLUMN -->
-<div class="col-lg-5" style="font-family: var(--ff-oxanium);">
+<div class="col-lg-5" style="font-family: var(--ff-oxanium);" data-aos="fade-right">
 
 <h5 class="fw-bold mb-4" style="font-size: var(--fs-7);">NOVAA Group Sdn Bhd (1597613-A)</h5>
 
@@ -250,16 +273,14 @@ admin@novaagroup.com
 </div>
 
 <!-- RIGHT COLUMN -->
-<div class="col-lg-7" style="color: var(--raisin-black-4);">
+<div class="col-lg-7" style="color: var(--raisin-black-4);" data-aos="fade-left">
     <h5 class="position-relative d-inline-block mb-4 fw-bold"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
                 font-size: var(--fs-12);
                 color: var(--roman-silver);">
         REACH OUT TO US
-        <span class="d-block mx-auto mt-2"
-                style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-        </span>
+        <span class="section-header-line"></span>
         </h5>
 
 <form id="contact-form"
@@ -289,8 +310,7 @@ admin@novaagroup.com
 </div>
 
 <div class="col-12 d-flex justify-content-end">
-<button type="submit" class="btn fw-bold px-5 p-2"
-style="background-color: var(--marigold_75); color: white; font-size: 0.7rem;">
+<button type="submit" class="btn btn-marigold px-5 p-2">
 SEND
 </button>
 </div>
@@ -307,16 +327,34 @@ SEND
 </div>
 
 <!-- FOOTER BOTTOM -->
-<div class="py-3 mt-5" style="background-color: var(--eerie-black-2); padding-left: 10dvw;">
+<div class="py-3 mt-5" style="background-color: var(--eerie-black-2);">
+<div class="footer-bottom-inner">
 
 <p class="mb-0 small" style="color: var(--roman-silver);">
 © 2025 NOVAA Group Sdn. Bhd.
 </p>
 
+<div class="social-icons">
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+        <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+</div>
+
+</div>
 </div>
 
 </footer>
 
+<!-- Back to Top -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</button>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -326,10 +364,15 @@ SEND
 <!-- AOS library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-        AOS.init({
-            offset: 300,
-            duration: 2000,
-        });
-    </script>
+    AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+    });
+</script>
+
+<!-- Custom JS -->
+<script src="./assets/js/script.js"></script>
 </body>
 </html>

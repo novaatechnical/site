@@ -26,7 +26,7 @@
 <body>
 
 <nav class="navbar navbar-dark p-3 sticky-top">
-    <div class="container d-flex align-items-center position-relative">
+    <div class="container-fluid px-4 px-lg-5 d-flex align-items-center position-relative">
 
         <!-- Desktop: MENU Left (HIDDEN on mobile) -->
         <button class="btn text-white d-none d-lg-flex align-items-center gap-2"
@@ -104,19 +104,23 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" style="font-weight: var(--fw-700)">Services</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-attire.html">Medical Attire</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="medical-equipment-rehabilitation.html">Medical and Rehabilitation Equipment Supply</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" style="padding-left: 30px; color: var(--marigold)" href="interior-construction.html">Interior and Special Construction</a>
+                <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse" style="font-weight: var(--fw-700); letter-spacing: 0.5px; padding-right: 20px;">
+                    Services
+                    <ion-icon name="chevron-down-outline" style="font-size: 1.1rem; color: var(--marigold);"></ion-icon>
+                </a>
+                <div class="collapse" id="servicesCollapse">
+                    <ul class="list-unstyled ms-3 mb-3 mt-2" style="border-left: 2px solid rgba(234,179,8,0.3); padding-left: 15px; display: flex; flex-direction: column; gap: 12px;">
+                        <li>
+                            <a class="sub-nav-link" href="medical-attire.html">Medical Attire</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="medical-equipment-rehabilitation.html">Medical & Rehabilitation Equipment Supply</a>
+                        </li>
+                        <li>
+                            <a class="sub-nav-link" href="interior-construction.html">Interior & Special Construction</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -130,74 +134,52 @@
     </div>
 </div>
 
-<!-- HERO -->
-<section class="hero position-relative">
+<section class="mt-5">
+  <div class="container py-5">
 
-  <picture>
-    <source 
-      media="(max-width: 992px)" 
-      srcset="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dwa67a7bd1/cherokee/homepage/ck-hero-mobile-august-labs-sets-20250801.jpg">
+    <!-- Title -->
+    <div class="row justify-content-center text-center mb-5" style="padding-bottom: 100px;">
+      <div class="col-lg-8">
+        <h2 style="font-family: var(--ff-oxanium);
+                   font-weight: var(--fw-800);
+                   color: var(--white);">
+          Medical Attire
+        </h2>
 
-    <img 
-      src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw7ada2bb7/cherokee/homepage/ck-hero-desktop-august-labs-sets-20250801.jpg"
-      class="img-fluid w-100 hero-img"
-      alt="Medical Attire">
-  </picture>
-
-  <div class="position-absolute top-0 start-0 h-100 d-flex align-items-center">
-    <div class="text-white d-none d-lg-block" style="padding-left: 10vw;">
-        <h1 class="fw-bold">Medical Attire</h1>
-        <p>Cherokee | Infinity</p>
-    </div>
-  </div>
-
-</section>
-
-
-<!-- DESCRIPTION -->
-<section class="mt-5" style="padding-top: 100px;">
-<div class="container py-5">
-
-    <div class="row justify-content-center text-center mb-5 "
-        style="padding-bottom:100px;">
-
-        <div class="col-lg-8">
-
-        <p style="color: var(--light-gray-2); line-height:1.8;" data-aos="fade-in">
+        <p class="mt-4"
+           style="color: var(--light-gray-2); line-height: 1.8;">
         Our Medical Attire service provides high-quality, functional, and professional uniforms tailored specifically for the healthcare industry. We understand that medical professionals require attire that is not only durable and comfortable but also meets hygiene standards and safety requirements.
         From hospitals and clinics to laboratories and pharmacies, we supply a complete range of medical clothing that supports the day-to-day demands of healthcare workers.
         </p>
-
-        </div>
+      </div>
     </div>
+  </div>
 </section>
-
 <!-- FEATURE SECTIONS -->
 
-<section class="mt-5">
-<div class="container"  style="text-align: center; padding-bottom: 100px;">
+<section class="section-padding">
+<div class="container">
 
-  <div class="row align-items-center mb-5" data-aos="fade-in">
+  <div class="row align-items-center mb-5" data-aos="fade-up">
 
-    <div class="col-lg-6">
-        <div class="ratio ratio-16x9">
-        <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dwf16cbdbc/blog/blog-post/ck-hero-desktop-best-scrubs-for-nurses-04012025.jpg"
-            class="w-100 h-100 rounded feature-img">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="img-hover-zoom">
+        <img src="assets/images/equipment-img1.jpeg"
+            class="w-100 rounded feature-img" style="object-fit: contain; max-height: 350px; background-color: #fff; padding: 15px;"
+            alt="Scrubs and Lab Coats">
         </div>
     </div>
 
-    <div class="col-lg-6 text-white mt-5">
-        <div class="text-center">
+    <div class="col-lg-6 text-white text-center text-lg-start ps-lg-5">
+        <div>
             <h4 class="text-white position-relative d-inline-block"
                 style="font-weight: var(--fw-700);
                     font-family: var(--ff-oxanium);">
             SCRUBS & LAB COATS
-            <span class="d-block mx-auto mt-2"
-                    style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-            </span>
+            <span class="section-header-line"></span>
             </h4>
         </div>
-        <p style="color:var(--light-gray-2);">
+        <p class="mt-3" style="color:var(--light-gray-2); line-height: 1.8;">
             Available in various sizes, colors, and cuts, our scrubs and lab coats are made
             from breathable, anti-bacterial, and easy-care fabrics suitable for long shifts
             and sterile environments.
@@ -206,26 +188,25 @@
 
   </div>
 
-  <div class="row align-items-center mb-5" data-aos="fade-in">
-    <div class="col-lg-6 order-lg-2 overflow-hidden">
-        <div class="ratio ratio-16x9">
-        <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw549c974d/blog/blog-post/ck-hero-deskop-different-scrub-materials-01012025.jpg"
-            class="w-100 h-100 rounded feature-img">
+  <div class="row align-items-center mb-5" data-aos="fade-up">
+    <div class="col-lg-6 order-lg-2 overflow-hidden mb-4 mb-lg-0">
+        <div class="img-hover-zoom">
+        <img src="assets/images/equipment-img2.jpeg"
+            class="w-100 rounded feature-img" style="object-fit: contain; max-height: 350px; background-color: #fff; padding: 15px;"
+            alt="Custom Uniforms">
         </div>
     </div>
 
-    <div class="col-lg-6 text-white mt-5">
-            <div class="text-center">
+    <div class="col-lg-6 text-white text-center text-lg-start pe-lg-5 order-lg-1">
+            <div>
                 <h4 class="text-white position-relative d-inline-block"
                     style="font-weight: var(--fw-700);
                         font-family: var(--ff-oxanium);">
                 CUSTOM UNIFORMS
-                <span class="d-block mx-auto mt-2"
-                        style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-                </span>
+                <span class="section-header-line"></span>
                 </h4>
             </div>
-      <p style="color:var(--light-gray-2);">
+      <p class="mt-3" style="color:var(--light-gray-2); line-height: 1.8;">
         We offer embroidery of names, logos, and department designations — ensuring
         your medical team maintains a unified and professional identity.
       </p>
@@ -233,28 +214,27 @@
 
   </div>
 
-    <div class="row align-items-center mb-5" data-aos="fade-in">
+    <div class="row align-items-center mb-5" data-aos="fade-up">
 
-    <div class="col-lg-6">
-        <div class="ratio ratio-16x9">
-        <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw685553bf/blog/blog-post/ck-hero-desktop-different-types-of-scrubs-20241010.jpg"
-            class="w-100 h-100 rounded feature-img">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="img-hover-zoom">
+        <img src="assets/images/equipment-img3.jpeg"
+            class="w-100 rounded feature-img" style="object-fit: contain; max-height: 350px; background-color: #fff; padding: 15px;"
+            alt="Nursing and Specialist Wear">
         </div>
     </div>
 
-        <div class="col-lg-6 text-white mt-5">
-            <div class="text-center">
+        <div class="col-lg-6 text-white text-center text-lg-start ps-lg-5">
+            <div>
                 <h4 class="text-white position-relative d-inline-block"
                     style="font-weight: var(--fw-700);
                         font-family: var(--ff-oxanium);">
                 NURSING & SPECIALIST WEAR
-                <span class="d-block mx-auto mt-2"
-                        style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-                </span>
+                <span class="section-header-line"></span>
                 </h4>
             </div>
 
-        <p style="color:var(--light-gray-2);">
+        <p class="mt-3" style="color:var(--light-gray-2); line-height: 1.8;">
         From nursing dresses and tunics to surgical gowns and PPE for frontline responders, our range is designed for functionality, comfort, and durability.
         </p>
 
@@ -262,27 +242,25 @@
     </div>
 
 
-    <div class="row align-items-center mb-5" data-aos="fade-in">
-    <div class="col-lg-6 order-lg-2 overflow-hidden">
-        <div class="ratio ratio-16x9">
-        <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw7929355c/blog/blog-post/ck-hero-desktop-top-trendy-scrub-pants-03012025.jpg"
-            class="w-100 h-100 rounded feature-img"
-             style="object-position: 80% center;">>
+    <div class="row align-items-center" data-aos="fade-up">
+    <div class="col-lg-6 order-lg-2 overflow-hidden mb-4 mb-lg-0">
+        <div class="img-hover-zoom">
+        <img src="assets/images/team-img1.jpeg"
+            class="w-100 rounded feature-img" style="object-fit: contain; max-height: 350px; background-color: #fff; padding: 15px;"
+            alt="Eco-Friendly Fabrics">
         </div>
     </div>
-        <div class="col-lg-6 text-white mt-5">
-            <div class="text-center">
+        <div class="col-lg-6 text-white text-center text-lg-start pe-lg-5 order-lg-1">
+            <div>
                 <h4 class="text-white position-relative d-inline-block"
                     style="font-weight: var(--fw-700);
                         font-family: var(--ff-oxanium);">
                 ECO-FRIENDLY & PERFORMANCE FABRICS
-                <span class="d-block mx-auto mt-2"
-                        style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-                </span>
+                <span class="section-header-line"></span>
                 </h4>
             </div>
 
-        <p style="color:var(--light-gray-2);">
+        <p class="mt-3" style="color:var(--light-gray-2); line-height: 1.8;">
         Our attire uses advanced textiles including moisture-wicking, antimicrobial protection, and sustainable materials supporting greener healthcare environments.
         </p>
 
@@ -293,48 +271,43 @@
 
 
 <!-- INDUSTRIES SERVED -->
-<section class="mt-5">
+<section class="section-padding">
 <div class="container">
 
-<div class="row justify-content-center mb-5" style="padding-bottom:100px;">
+<div class="row justify-content-center">
 
-<div class="col-12">
+<div class="col-12" data-aos="fade-up">
 
-<div class="text-center">
+<div class="text-center mb-5">
 <h4 class="text-white position-relative d-inline-block"
 style="font-family:var(--ff-oxanium); font-weight:var(--fw-700);">
-
 INDUSTRIES SERVED
-
-<span class="d-block mx-auto mt-2"
-style="width:40%;height:3px;background:var(--marigold);border-radius:2px;">
-</span>
-
+<span class="section-header-line"></span>
 </h4>
 </div>
 
-<div class="row g-4 text-center mt-4">
+<div class="row g-4 text-center mt-4" data-aos-stagger>
 
-<div class="col-md-3">
-<div class="p-2 text-white">
+<div class="col-md-3" data-aos="fade-up">
+<div class="glass-card h-100 text-white d-flex align-items-center justify-content-center">
 Hospitals & Clinics
 </div>
 </div>
 
-<div class="col-md-3">
-<div class="p-2 text-white">
+<div class="col-md-3" data-aos="fade-up">
+<div class="glass-card h-100 text-white d-flex align-items-center justify-content-center">
 Pharmacies & Wellness Centers
 </div>
 </div>
 
-<div class="col-md-3">
-<div class="p-2 text-white">
+<div class="col-md-3" data-aos="fade-up">
+<div class="glass-card h-100 text-white d-flex align-items-center justify-content-center">
 Educational Institutions (Medical Schools)
 </div>
 </div>
 
-<div class="col-md-3">
-<div class="p-2 text-white">
+<div class="col-md-3" data-aos="fade-up">
+<div class="glass-card h-100 text-white d-flex align-items-center justify-content-center">
 Veterinary & Animal Clinics
 </div>
 </div>
@@ -348,29 +321,23 @@ Veterinary & Animal Clinics
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="mt-5">
+<section class="section-padding">
 
 <div class="container">
 
-<div class="row justify-content-center mb-5" style="padding-bottom:100px;">
+<div class="row justify-content-center" data-aos="fade-up">
 
 <div class="col-lg-8 text-center">
 
-<div class="text-center">
+<div class="text-center mb-4">
 <h4 class="text-white position-relative d-inline-block"
 style="font-family:var(--ff-oxanium); font-weight:var(--fw-700);">
-
 WHY CHOOSE US
-
-<span class="d-block mx-auto mt-2"
-style="width:40%;height:3px;background:var(--marigold);border-radius:2px;">
-</span>
-
+<span class="section-header-line"></span>
 </h4>
 </div>
 
-<p class="mt-4"
-style="color:var(--light-gray-2);line-height:1.8;">
+<p style="color:var(--light-gray-2);line-height:1.8;">
 We combine quality craftsmanship, reliable sourcing, and customization capabilities to deliver attire that reflects your organization’s standards and professionalism. With our experience and commitment to service, we help healthcare providers focus on what matters most—caring for others—while we take care of what they wear.
 </p>
 
@@ -383,26 +350,24 @@ We combine quality craftsmanship, reliable sourcing, and customization capabilit
 </section>
 
 <!-- BRANDS -->
-<section class="p-5" style="background-color: var(--raisin-black-4);">
+<section class="section-padding" style="background-color: var(--raisin-black-4);">
+<div class="container">
 <div class="row justify-content-center">
 
 <div class="col-lg-10">
 
 <h2 class="text-center text-white mb-5"
-style="font-family:var(--ff-oxanium);
-font-weight:var(--fw-700);">
+style="font-family:var(--ff-oxanium); font-weight:var(--fw-700);" data-aos="fade-up">
 BRANDS
+<span class="section-header-line"></span>
 </h2>
 
-<div class="text-white text-center">
+<div class="text-white text-center mb-4" data-aos="fade-up">
         <h4 class="text-white position-relative d-inline-block"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
-                font-size: var(--fs-10);">
+                font-size: var(--fs-5);">
         CHEROKEE
-        <span class="d-block mx-auto mt-2"
-                style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-        </span>
         </h4>
     <p class="mt-2"
     style="color:var(--light-gray-2);line-height:1.8;">
@@ -410,33 +375,32 @@ BRANDS
     </p>
 </div>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-aos-stagger>
 
-<div class="col-lg-6">
-  <div class="ratio ratio-16x9">
-    <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw90811a17/landing/cherokee-collections/ck-lp-collections-aqua-desktop-atmos-20240103.jpg"
-         class="w-100 h-100 object-fit-cover rounded">
+<div class="col-lg-6" data-aos="fade-up">
+  <div class="img-hover-zoom h-100">
+    <img src="assets/images/project1-img1.jpeg"
+         class="w-100 h-100 rounded" style="object-fit: contain; max-height: 250px; background-color: #fff; padding: 10px;"
+         alt="Cherokee">
   </div>
 </div>
 
-<div class="col-lg-6">
-  <div class="ratio ratio-16x9">
-    <img src="https://www.cherokeeuniforms.com/on/demandware.static/-/Sites-allheart-Library/default/dw8d5222d7/landing/cherokee-collections/ck-lp-collections-aqua-desktop-ck-by-ck-20230919.jpg"
-         class="w-100 h-100 object-fit-cover rounded">
+<div class="col-lg-6" data-aos="fade-up">
+  <div class="img-hover-zoom h-100">
+    <img src="assets/images/project1-img2.jpeg"
+         class="w-100 h-100 rounded" style="object-fit: contain; max-height: 250px; background-color: #fff; padding: 10px;"
+         alt="Cherokee">
   </div>
 </div>
 
 </div>
 
-<div class="text-white text-center">
+<div class="text-white text-center mt-5 mb-4" data-aos="fade-up">
         <h4 class="text-white position-relative d-inline-block"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
-                font-size: var(--fs-10);">
+                font-size: var(--fs-5);">
         INFINITY
-        <span class="d-block mx-auto mt-2"
-                style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-        </span>
         </h4>
     <p class="mt-2"
     style="color:var(--light-gray-2);line-height:1.8;">
@@ -444,26 +408,28 @@ BRANDS
     </p>
 </div>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-aos-stagger>
 
-<div class="col-lg-6">
-  <div class="ratio ratio-16x9">
-    <img src="https://images.squarespace-cdn.com/content/v1/632ae25fad7703640c389c78/94d9402d-b5d0-41f0-8ab6-a0a28db6dbd2/infinity_link.jpg?format=2500w"
-         class="w-100 h-100 object-fit-cover rounded">
+<div class="col-lg-6" data-aos="fade-up">
+  <div class="img-hover-zoom h-100">
+    <img src="assets/images/project1-img3.jpeg"
+         class="w-100 h-100 rounded" style="object-fit: contain; max-height: 250px; background-color: #fff; padding: 10px;"
+         alt="Infinity">
   </div>
 </div>
 
-<div class="col-lg-6">
-  <div class="ratio ratio-16x9">
-    <img src="https://www.allheart.com/on/demandware.static/-/Sites-allheart-Library/default/dwbbfa90a9/featured-products/infinity/ah-plp-aqua-infinity-apparel-mobile-20240516.jpg"
-         class="w-100 h-100 object-fit-cover rounded">
+<div class="col-lg-6" data-aos="fade-up">
+  <div class="img-hover-zoom h-100">
+    <img src="assets/images/project1-img4.jpeg"
+         class="w-100 h-100 rounded" style="object-fit: contain; max-height: 250px; background-color: #fff; padding: 10px;"
+         alt="Infinity">
   </div>
 </div>
 
 </div>
 
-<p class="text-center"
-style="color:var(--light-gray-2); font-size: 0.5rem;">
+<p class="text-center mt-5"
+style="color:var(--light-gray-2); font-size: 0.8rem;">
 *Product images are for illustrative purposes only and may differ from actual products.
 </p>
 
@@ -473,12 +439,8 @@ style="color:var(--light-gray-2); font-size: 0.5rem;">
 </div>
 </section>
 
-</article>
-</main>
-
 <!-- FOOTER -->
-
-<div class="w-100" style="height: 1px; background-color: var(--marigold);"></div>
+<div class="w-100 footer-divider"></div>
 
 <footer class="text-white pt-5" id="contact" >
 
@@ -487,7 +449,7 @@ style="color:var(--light-gray-2); font-size: 0.5rem;">
 <div class="row g-5">
 
 <!-- LEFT COLUMN -->
-<div class="col-lg-5" style="font-family: var(--ff-oxanium);">
+<div class="col-lg-5" style="font-family: var(--ff-oxanium);" data-aos="fade-right">
 
 <h5 class="fw-bold mb-4" style="font-size: var(--fs-7);">NOVAA Group Sdn Bhd (1597613-A)</h5>
 
@@ -527,16 +489,14 @@ admin@novaagroup.com
 </div>
 
 <!-- RIGHT COLUMN -->
-<div class="col-lg-7" style="color: var(--raisin-black-4);">
+<div class="col-lg-7" style="color: var(--raisin-black-4);" data-aos="fade-left">
     <h5 class="position-relative d-inline-block mb-4 fw-bold"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
                 font-size: var(--fs-12);
                 color: var(--roman-silver);">
         REACH OUT TO US
-        <span class="d-block mx-auto mt-2"
-                style="width: 40%; height: 3px; background: var(--marigold); border-radius: 2px;">
-        </span>
+        <span class="section-header-line"></span>
         </h5>
 
 <form id="contact-form"
@@ -566,8 +526,7 @@ admin@novaagroup.com
 </div>
 
 <div class="col-12 d-flex justify-content-end">
-<button type="submit" class="btn fw-bold px-5 p-2"
-style="background-color: var(--marigold_75); color: white; font-size: 0.7rem;">
+<button type="submit" class="btn btn-marigold px-5 p-2">
 SEND
 </button>
 </div>
@@ -584,16 +543,34 @@ SEND
 </div>
 
 <!-- FOOTER BOTTOM -->
-<div class="py-3 mt-5" style="background-color: var(--eerie-black-2); padding-left: 10dvw;">
+<div class="py-3 mt-5" style="background-color: var(--eerie-black-2);">
+<div class="footer-bottom-inner">
 
 <p class="mb-0 small" style="color: var(--roman-silver);">
 © 2025 NOVAA Group Sdn. Bhd.
 </p>
 
+<div class="social-icons">
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+        <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+</div>
+
+</div>
 </div>
 
 </footer>
 
+<!-- Back to Top -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</button>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -603,10 +580,15 @@ SEND
 <!-- AOS library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-        AOS.init({
-            offset: 300,
-            duration: 2000,
-        });
-    </script>
+    AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+    });
+</script>
+
+<!-- Custom JS -->
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
