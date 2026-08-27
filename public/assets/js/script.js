@@ -202,4 +202,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // ── WOW IMPACT: Scroll Progress Bar ──
+    const scrollProgress = document.getElementById("scrollProgress");
+    if (scrollProgress) {
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = scrollTop / (docHeight - winHeight);
+            scrollProgress.style.width = Math.round(scrollPercent * 100) + "%";
+        }, { passive: true });
+    }
+
+    // ── WOW IMPACT: VanillaTilt.js ──
+    if (typeof VanillaTilt !== "undefined") {
+        VanillaTilt.init(document.querySelectorAll(".service-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+            scale: 1.02
+        });
+        
+        VanillaTilt.init(document.querySelectorAll(".glass-card"), {
+            max: 10,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.1
+        });
+    }
+
 });
