@@ -8,6 +8,14 @@ This repository contains the static website for **NOVAA Group Sdn. Bhd.** hosted
 
 To preview the website locally on your computer while editing:
 
+First, install the dependencies (only needed once, after cloning). This requires [Node.js](https://nodejs.org/):
+
+```bash
+npm install
+```
+
+Then start the local server:
+
 ```bash
 npm run dev
 ```
