@@ -10,11 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const status = document.getElementById('form-status');
         const submitBtn = form.querySelector('[type="submit"]');
 
+        // Show a status message, then fade it out after a few seconds
+        let hideTimer = null;
+        status.style.transition = 'opacity 0.6s ease';
+        const showStatus = function (text, color, seconds) {
+            clearTimeout(hideTimer);
+            status.textContent = text;
+            status.style.color = color;
+            status.style.opacity = '1';
+            if (!seconds) return;
+            hideTimer = setTimeout(function () {
+                status.style.opacity = '0';
+                hideTimer = setTimeout(function () { status.textContent = ''; }, 600);
+            }, seconds * 1000);
+        };
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             submitBtn.disabled = true;
-            status.textContent = 'Sending message...';
-            status.style.color = '#00FFFF';
+            showStatus('Sending message...', '#00FFFF');
 
             // FormSubmit's AJAX endpoint answers with JSON ({ success, message }), so a
             // message only counts as sent when FormSubmit confirms it was delivered
@@ -31,18 +45,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!delivered) {
                     throw new Error(data.message || 'Form submission failed');
                 }
-                status.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
-                status.style.color = 'lightgreen';
+                showStatus('Thank you! Your message has been sent. We will get back to you soon.', 'lightgreen', 8);
                 form.reset();
-                setTimeout(() => { status.textContent = ''; }, 8000);
             }))
             .catch(error => {
                 // Visitors never see technical details; those go to the console only.
                 // What they typed is kept so they can try again or copy it.
                 console.error('Form submission error:', error);
-                status.textContent = 'Sorry, we couldn’t send your message right now. ' +
-                    'Please try again shortly, or email us at admin@novaagroup.com.';
-                status.style.color = 'var(--marigold)';
+                showStatus('Sorry, we couldn’t send your message right now. ' +
+                    'Please try again shortly, or email us at admin@novaagroup.com.', 'var(--marigold)', 8);
             })
             .finally(() => {
                 submitBtn.disabled = false;
