@@ -31,18 +31,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!delivered) {
                     throw new Error(data.message || 'Form submission failed');
                 }
-                status.textContent = 'Message sent successfully!';
+                status.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
                 status.style.color = 'lightgreen';
                 form.reset();
+                setTimeout(() => { status.textContent = ''; }, 8000);
             }))
             .catch(error => {
-                status.textContent = `Error: ${error.message}`;
-                status.style.color = '#ff5555';
+                // Visitors never see technical details; those go to the console only.
+                // What they typed is kept so they can try again or copy it.
                 console.error('Form submission error:', error);
+                status.textContent = 'Sorry, we couldn’t send your message right now. ' +
+                    'Please try again shortly, or email us at admin@novaagroup.com.';
+                status.style.color = 'var(--marigold)';
             })
             .finally(() => {
                 submitBtn.disabled = false;
-                setTimeout(() => { status.textContent = ''; }, 5000);
             });
         });
     }
