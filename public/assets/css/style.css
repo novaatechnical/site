@@ -1778,6 +1778,28 @@ body > section .glass-card {
     font-size: 0.85rem;
 }
 
+/* Catalogue pages under a brand's products */
+.catalog-block {
+    margin-top: 56px;
+    text-align: center;
+}
+
+.product-card.catalog-sheet img {
+    aspect-ratio: auto;
+    height: auto;
+    padding: 0;
+}
+
+.catalog-sheet figcaption {
+    font-size: 0.95rem;
+}
+
+.catalog-hint {
+    margin: 16px 0 0;
+    color: var(--roman-silver);
+    font-size: 0.9rem;
+}
+
 /* Short note under a brand's products */
 .brand-panel-note {
     max-width: 720px;
