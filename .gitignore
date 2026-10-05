@@ -67,3 +67,27 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Duplicate clone of this repo (not part of the site)
+/site/
+
+# Original, full-size images kept locally only; the site uses the
+# web-optimised copies in public/assets/images/products/ and brands/
+/public/assets/images/PATIENT MONITOR G SERIES/
+/public/assets/images/PATIENT MONITOR P SERIES/
+/public/assets/images/Portable Water Treadmill P*.png
+/public/assets/images/Syringe Pump P300/
+/public/assets/images/Syringe Pump S300/
+/public/assets/images/Volumetric Pump P500/
+/public/assets/images/Volumetric Pump S500/
+/public/assets/images/Whirlpool Lower Limb (WKS)/
+/public/assets/images/Whirlpool Upper Limb (WKG)/
+/public/assets/images/cherokeeMedAttire.png
+/public/assets/images/healinghandMedAttire.png
+/public/assets/images/intelligentSauna.png
+/public/assets/images/logoAquamaxx.jpeg
+/public/assets/images/logoBiolight.jpeg
+/public/assets/images/logoCareismatic.jpeg
+/public/assets/images/logoDrFamulus.jpg
+/public/assets/images/logoHydromove.png
+/public/assets/images/logoMedeninmed.jpeg
