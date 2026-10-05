@@ -1599,7 +1599,7 @@ body > section .glass-card {
 /* Brand logos sit on light cards so logos made for white backgrounds read well */
 .brand-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* columns never grow past the screen */
     gap: 22px;
     max-width: 960px;
     margin: 0 auto 64px;
@@ -1610,6 +1610,7 @@ body > section .glass-card {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 0;
     aspect-ratio: 16 / 9;
     padding: 24px;
     background: #f7f4ee;
@@ -1627,9 +1628,17 @@ body > section .glass-card {
         opacity 0.3s ease;
 }
 
+/* Logo pinned inside the card with fixed margins, so its size never depends on
+   the image's natural size (Safari ignores % heights in aspect-ratio boxes) */
 .brand-tile img {
-    max-width: 80%;
-    max-height: 88%;
+    position: absolute;
+    top: var(--logo-pad-y, 12%);
+    bottom: var(--logo-pad-y, 12%);
+    left: var(--logo-pad-x, 10%);
+    right: var(--logo-pad-x, 10%);
+    width: calc(100% - 2 * var(--logo-pad-x, 10%));
+    height: calc(100% - 2 * var(--logo-pad-y, 12%));
+    max-width: none;
     object-fit: contain;
 }
 
@@ -1982,7 +1991,7 @@ body > section .glass-card {
 
 @media (max-width: 767.98px) {
     .brand-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
         margin-bottom: 48px;
     }
@@ -1993,6 +2002,19 @@ body > section .glass-card {
 
     .brand-tile-name {
         font-size: 1.05rem;
+    }
+
+    .brand-tile-tag {
+        top: 6px;
+        right: 6px;
+        padding: 2px 8px;
+        font-size: 0.58rem;
+    }
+
+    /* Keep a tagged logo clear of its tag */
+    .brand-tile:has(.brand-tile-tag) img {
+        top: 26%;
+        height: calc(100% - 26% - 8%);
     }
 }
 
