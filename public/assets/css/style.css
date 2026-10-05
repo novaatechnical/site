@@ -1778,6 +1778,11 @@ body > section .glass-card {
     font-size: 0.85rem;
 }
 
+/* Dr. Famulus chest pieces fill their photos edge to edge; give them breathing room */
+#dr-famulus .product-card:not(.catalog-sheet) img {
+    padding: 15%;
+}
+
 /* Catalogue pages under a brand's products */
 .catalog-block {
     margin-top: 56px;
