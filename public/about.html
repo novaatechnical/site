@@ -16,7 +16,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Your Existing CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=20261005l">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,6 +69,7 @@
             <li><a class="dropdown-item" style="padding-left: 30px; color: var(--marigold); border-bottom: transparent;" href="medical-attire.html">Medical Attire</a></li>
             <li><a class="dropdown-item" style="padding-left: 30px; color: var(--marigold); border-bottom: transparent;" href="medical-equipment-rehabilitation.html">Medical and Rehabilitation<br> Equipment Supply</a></li>
             <li><a class="dropdown-item" style="padding-left: 30px; color: var(--marigold);" href="interior-construction.html">Interior and Special Construction</a></li>
+            <li><a class="dropdown-item text-white" href="distributorship.html">Authorized Distributorship</a></li>
             <li><a class="dropdown-item text-white" href="team.html">Our Team</a></li>
             <li><a class="dropdown-item text-white" href="project.html">Projects</a></li>
         </ul>
@@ -77,46 +78,49 @@
     </div>
 </nav>
 
-<div class="offcanvas offcanvas-start text-bg-dark"
+<div class="offcanvas offcanvas-start sidebar-creative"
      tabindex="-1"
-     id="sidebar">
+     id="sidebar"
+     aria-labelledby="sidebarLabel">
 
     <div class="offcanvas-header">
-        <a href="index.html">
-        <img src="assets/images/logofull2.png" alt="NOVAA Group Logo" height="50px">
+        <a href="index.html" class="sidebar-logo">
+        <img src="assets/images/logofull2.png" alt="NOVAA Group Logo" height="50">
         </a>
         <button type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas"></button>
+                class="sidebar-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close menu"></button>
     </div>
 
     <div class="offcanvas-body">
-        <ul class="nav flex-column">
+        <p class="sidebar-eyebrow" id="sidebarLabel">Navigation</p>
+
+        <ul class="nav flex-column sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link text-white" href="index.html">Home</a>
-            </li>
-
-
-            <li class="nav-item">
-                <a class="nav-link text-white" href="about.html">About</a>
+                <a class="nav-link" href="index.html"><span class="sidebar-label">Home</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" href="policy.html">Company Policy</a>
+                <a class="nav-link" href="about.html"><span class="sidebar-label">About</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" href="missionvision.html">Mission and Vision</a>
+                <a class="nav-link" href="policy.html"><span class="sidebar-label">Company Policy</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse" style="font-weight: var(--fw-700); letter-spacing: 0.5px; padding-right: 20px;">
-                    Services
-                    <ion-icon name="chevron-down-outline" style="font-size: 1.1rem; color: var(--marigold);"></ion-icon>
+                <a class="nav-link" href="missionvision.html"><span class="sidebar-label">Mission and Vision</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link sidebar-toggle collapsed" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse">
+                    <span class="sidebar-label">Services</span>
+                    <span class="sidebar-toggle-mark" aria-hidden="true"></span>
                 </a>
                 <div class="collapse" id="servicesCollapse">
-                    <ul class="list-unstyled ms-3 mb-3 mt-2" style="border-left: 2px solid rgba(234,179,8,0.3); padding-left: 15px; display: flex; flex-direction: column; gap: 12px;">
+                    <ul class="list-unstyled sidebar-subnav">
                         <li>
                             <a class="sub-nav-link" href="medical-attire.html">Medical Attire</a>
                         </li>
@@ -131,11 +135,15 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" href="team.html">Our Team</a>
+                <a class="nav-link" href="distributorship.html"><span class="sidebar-label">Authorized Distributorship</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white" href="project.html">Projects</a>
+                <a class="nav-link" href="team.html"><span class="sidebar-label">Our Team</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="project.html"><span class="sidebar-label">Projects</span></a>
             </li>
         </ul>
     </div>
@@ -144,17 +152,27 @@
 
 <!-- PAGE HERO -->
 <section class="page-hero">
-    <div class="page-hero-dot-grid"></div>
+    <div id="particles-page" class="page-hero-particles" aria-hidden="true"></div>
+    <div class="page-hero-dot-grid" aria-hidden="true"></div>
     <div class="container page-hero-content">
-        <div data-aos="fade-up">
-            <span class="page-hero-eyebrow">NOVAA Group</span>
-            <h1>About Us</h1>
-            <p>Delivering exceptional products and services with integrity, excellence, and a commitment to sustainable growth.</p>
-            <nav class="page-hero-breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="sep">&#9656;</span>
-                <span class="current">About</span>
-            </nav>
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <span class="page-hero-eyebrow">NOVAA Group Sdn. Bhd.</span>
+                <h1>About Us</h1>
+                <p class="page-hero-lead">Delivering exceptional products and services with integrity, excellence, and a commitment to sustainable growth.</p>
+                <nav class="page-hero-breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="sep">&#9656;</span>
+                    <span class="current">About</span>
+                </nav>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="page-hero-emblem" aria-hidden="true">
+                    <span class="page-hero-emblem-glow"></span>
+                    <img src="assets/images/logo.png" alt="">
+                    <span class="page-hero-emblem-shine"></span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -211,7 +229,7 @@
 <!-- LEFT COLUMN -->
 <div class="col-lg-5" style="font-family: var(--ff-oxanium);" data-aos="fade-right">
 
-<h5 class="fw-bold mb-4" style="font-size: var(--fs-7);">NOVAA Group Sdn Bhd (1597613-A)</h5>
+<h5 class="fw-bold mb-4" style="font-size: var(--fs-7);">NOVAA Group Sdn Bhd (1597612-A)</h5>
 
 <ul class="list-unstyled" style="color:var(--roman-silver)">
 
@@ -241,7 +259,7 @@ admin@novaagroup.com
 
 <li class="d-flex">
 <ion-icon name="business-outline" class="me-3"></ion-icon>
-<span>Monday - Friday: 8.30AM - 5.30PM</span>
+<span>Monday - Friday : 8.30 AM - 5.30 PM</span>
 </li>
 
 </ul>
@@ -253,7 +271,8 @@ admin@novaagroup.com
     <h5 class="position-relative d-inline-block mb-4 fw-bold"
             style="font-weight: var(--fw-700);
                 font-family: var(--ff-oxanium);
-                font-size: var(--fs-12);
+                font-size: 0.95rem;
+                letter-spacing: 0.08em;
                 color: var(--roman-silver);">
         REACH OUT TO US
         <span class="section-header-line"></span>
@@ -339,6 +358,7 @@ SEND
 </script>
 
 <!-- Custom JS -->
-<script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="./assets/js/script.js?v=20261005l"></script>
 </body>
 </html>
