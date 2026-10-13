@@ -330,7 +330,7 @@ body {
     justify-content: space-between;
     padding: 9px 0;
     color: var(--white);
-    font-size: 1.55rem;
+    font-size: 1.15rem;
     font-weight: var(--fw-600);
     letter-spacing: -0.015em;
     line-height: 1.25; /* long labels wrap neatly */
@@ -407,7 +407,7 @@ body {
 
 .sidebar-creative .sub-nav-link {
     --sweep-base: var(--light-gray-1);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: var(--fw-500);
     line-height: 1.4;
     text-decoration: none;
@@ -2016,11 +2016,25 @@ body > section .glass-card {
     transform: rotate(90deg);
 }
 
+/* A lone tile on the last row sits in the middle column */
+@media (min-width: 768px) {
+    .brand-tile:last-child:nth-child(3n + 1) {
+        grid-column: 2;
+    }
+}
+
 @media (max-width: 767.98px) {
     .brand-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
         margin-bottom: 48px;
+    }
+
+    /* A lone tile on the last row is centred, at the same width as the rest */
+    .brand-tile:last-child:nth-child(2n + 1) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 7px);
     }
 
     .brand-tile {
