@@ -1536,8 +1536,8 @@ body > section .glass-card {
         transparent 45%, hsla(48, 100%, 92%, 0.75) 50%, transparent 55%);
     background-size: 300% 100%;
     background-repeat: no-repeat;
-    -webkit-mask: url("../images/logo.png") center / contain no-repeat;
-    mask: url("../images/logo.png") center / contain no-repeat;
+    -webkit-mask: url("../images/logo.webp") center / contain no-repeat;
+    mask: url("../images/logo.webp") center / contain no-repeat;
     pointer-events: none;
     animation: heroLightSweep 6s ease-in-out 1s infinite;
 }
@@ -2806,6 +2806,28 @@ body > section .glass-card {
     color: var(--eerie-black-2);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+/* Office map under the contact details, toned down to suit the dark footer */
+.footer-map {
+    margin-top: 28px;
+    overflow: hidden;
+    border: 1px solid var(--white_10);
+    border-radius: 12px;
+    aspect-ratio: 16 / 9;
+}
+
+.footer-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: invert(90%) hue-rotate(180deg) saturate(0.6);
+    transition: filter 0.4s ease;
+}
+
+.footer-map:hover iframe {
+    filter: none;
 }
 
 .footer-bottom-inner {
